@@ -1,14 +1,15 @@
 import { useMemo } from "react";
+import PropTypes from "prop-types";
 import "./TextField.css";
+
 const TextField = ({
   label,
   icon,
-  prop,
-  icons,
+  value,
+  onChange,
   textFieldWidth,
   textFieldZIndex,
   rectangle1Display,
-  propDisplay,
 }) => {
   const textFieldStyle = useMemo(() => {
     return {
@@ -23,11 +24,7 @@ const TextField = ({
     };
   }, [rectangle1Display]);
 
-  const rectangleDivStyle = useMemo(() => {
-    return {
-      display: propDisplay,
-    };
-  }, [propDisplay]);
+  
 
   return (
     <div className="text-field2" style={textFieldStyle}>
@@ -38,16 +35,30 @@ const TextField = ({
           <div className="hide1">Hide</div>
         </div>
       </div>
-      <div className="text-field3">
-        <div className="inputs1">
-          <div className="div7">{prop}</div>
-          <div className="inputs-item" style={rectangleDivStyle} />
-        </div>
-        <img className="icons2" alt="" src={icons} />
-      </div>
+        
+          <input
+            type="text"
+            value={value}
+            onChange={onChange}
+            className="div7"
+          />
+        
+      
       <div className="error-message1">Error message</div>
     </div>
   );
+};
+
+TextField.propTypes = {
+  label: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  icons: PropTypes.string.isRequired,
+  textFieldWidth: PropTypes.string,
+  textFieldZIndex: PropTypes.number,
+  rectangle1Display: PropTypes.string,
+  propDisplay: PropTypes.string,
 };
 
 export default TextField;
