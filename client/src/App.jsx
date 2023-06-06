@@ -10,6 +10,7 @@ import SignUpMail from "./pages/SignUpMail/SignUpMail";
 import Login from "./pages/login/login";
 import { useEffect } from "react";
 import CreateCircle from "./pages/learningCircle/createCircle/createCircle";
+import JoinCircle from "./pages/learningCircle/joinCircle/JoinCircle";
 
 
 function App() {
@@ -73,6 +74,7 @@ function App() {
       <Route path="/signup-mail" element={<SignUpMail />} />
       <Route path="/login" element={<Login />} />
       <Route path="/create-circle" element={<CreateCircle />} />
+      <Route path="/join-circle" element={<JoinCircle />} />
     </Routes>
     
   );
