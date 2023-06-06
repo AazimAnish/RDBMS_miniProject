@@ -13,6 +13,7 @@ import CreateCircle from "./pages/learningCircle/createCircle/createCircle";
 import JoinCircle from "./pages/learningCircle/joinCircle/JoinCircle";
 
 
+
 function App() {
   const location = useLocation();
   const pathname = location.pathname;
@@ -75,6 +76,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/create-circle" element={<CreateCircle />} />
       <Route path="/join-circle" element={<JoinCircle />} />
+
     </Routes>
     
   );

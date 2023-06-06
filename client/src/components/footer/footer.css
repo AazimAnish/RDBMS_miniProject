@@ -1,13 +1,14 @@
 .ready-to-level {
   margin: 0;
+
 }
 .ready-to-level-container {
   position: relative;
-  line-height: 70.4px;
+  line-height: 0.4px;
 }
 .text1 {
   position: absolute;
-  top: calc(50% - 71.39px);
+  top: 56px;
   left: 0;
   display: flex;
   flex-direction: row;
@@ -23,17 +24,17 @@
 }
 .signup-button {
   position: absolute;
-  top: calc(50% - 56px);
-  left: 840.94px;
+  top: 31px;
+  left: 1005.94px;
   border-radius: var(--br-13xl);
   background-color: var(--color-khaki);
   display: flex;
   flex-direction: row;
-  padding: var(--padding-21xl) 6.25rem var(--padding-21xl) var(--padding-76xl);
+  padding: 10px;
   align-items: flex-start;
   justify-content: flex-start;
   cursor: pointer;
-  font-size: var(--font-size-13xl);
+  font-size: 15px;
   color: var(--color-gray-300);
 }
 .signup-container {
@@ -99,7 +100,7 @@
 }
 .footer-info {
   width: 23.33rem;
-  height: 26.09rem;
+  height: 18.09rem;
   flex-direction: column;
   align-items: center;
   gap: var(--gap-155xl);
@@ -178,7 +179,7 @@
 .footer-list {
   position: relative;
   width: 49.17rem;
-  height: 12.28rem;
+  height: .28rem;
 }
 .cookie-policy,
 .privacy-policy3,
@@ -189,7 +190,7 @@
   display: flex;
   align-items: center;
   width: 8.05rem;
-  height: 1.06rem;
+  height: 26.06rem;
   flex-shrink: 0;
 }
 .cookie-policy,
@@ -205,6 +206,7 @@
   justify-content: flex-start;
 }
 .policy {
+  padding-top: 20px;
   height: 13.81rem;
   display: flex;
   flex-direction: row;
@@ -229,8 +231,8 @@
 .footer-container {
   border-radius: var(--br-xl);
   background-color: var(--color-gray-100);
-  width: 82.5rem;
-  height: 33.59rem;
+  width: 75.5rem;
+  height: 17.59rem;
   flex-direction: row;
   padding: 0 var(--padding-41xl);
   box-sizing: border-box;
@@ -242,8 +244,8 @@
 }
 .footer1 {
   background-color: var(--color-gray-300);
-  width: 120rem;
-  height: 67.39rem;
+  width: 86.39rem;
+  height: 23.39rem;
   overflow: hidden;
   flex-shrink: 0;
   flex-direction: column;
