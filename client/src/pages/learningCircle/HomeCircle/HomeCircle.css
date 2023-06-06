@@ -1,4 +1,4 @@
-.main {
+.mainlearnlearn {
     width: 50%;
     height: 60%;
     left: 77px;
@@ -9,18 +9,18 @@
     align-items: flex-start;
 }
 
-.container {
+.containerlearn {
     position: relative;
     height: 100vh;
     width: 100vw;
 }
 
-h1 {
+.textlearn {
     font-size: 70px;
     margin: 15px 0px;
 } 
 
-button {
+.jcb {
     display: inline-block;
     padding: 12px 24px;
     background-color: #4CAF50;
@@ -34,7 +34,7 @@ button {
     margin: 0px 12px;
   }
 
-  .footer {
+  .footerlearn {
     left: 77px;
     bottom: 0px;
     position: absolute;

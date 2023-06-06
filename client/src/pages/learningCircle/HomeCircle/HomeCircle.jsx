@@ -5,17 +5,17 @@ import Footer from '../../../components/footer/footer';
 
 function HomeCircle() {
   return (
-    <div className='container'>
+    <div className='containerlearn'>
       < Navbar />
-      <div className="main">
-        <h1>Learning Circle</h1>
+      <div className="mainlearn">
+        <h1 className='textlearn'>Learning Circle</h1>
         <h2>An informal mechanism for bringing together learners who are interested in the same topic from across different fields and disciplines. A fantastic way to spend a small amount of time learning about new things with a group of people with same interests!</h2>
           <div className='jcb'>
             <button> Join </button>
             <button> Create </button>
           </div>
         </div>
-        <div className='footer'>
+        <div className='footerlearn'>
         < Footer />
         </div>
     </div>
