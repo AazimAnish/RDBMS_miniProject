@@ -24,57 +24,37 @@ const CreateCircle = () => {
   return (
     <div>
       <h1>Enter Details</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Lead Name:</label>
-          <input
-            type="text"
-            value={leadName}
-            onChange={(e) => setLeadName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Circle Name:</label>
-          <input
-            type="text"
-            value={circleName}
-            onChange={(e) => setCircleName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Phone Number:</label>
-          <input
-            type="tel"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Meet Place:</label>
-          <input
-            type="text"
-            value={meetPlace}
-            onChange={(e) => setMeetPlace(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Meet Time:</label>
-          <input
-            type="text"
-            value={meetTime}
-            onChange={(e) => setMeetTime(e.target.value)}
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      <div id="frm">
+			<form action ="http://localhost/RDBMS_MINIPROJECT/server/create_circle.php" method="post">
+			  <p>
+				<label>lead Name:</label>
+				<input type="text" id="lead_name" name="lead_name" />
+			  </p>
+			  <p>
+				<label>circle_name:</label>
+				<input type="text" id="circle_name" name="circle_name" />
+			  </p>
+              <p>
+				<label>email:</label>
+				<input type="text" id="email" name="email" />
+			  </p>
+              <p>
+				<label>phoneNumber:</label>
+				<input type="text" id="phone_no" name="phone_no" />
+			  </p>
+              <p>
+				<label>Meet Place:</label>
+				<input type="text" id="meet_place" name="meet_place" />
+			  </p>
+              <p>
+				<label>meet time:</label>
+				<input type="text" id="meet_time" name="meet_time" />
+			  </p>
+			  <p>
+				<input type="submit" id="btn" value="submit" />
+			  </p>
+			</form>
+		  </div>
     </div>
   );
 };
