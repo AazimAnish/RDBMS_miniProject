@@ -1,35 +1,62 @@
-.close-btn-icon {
-  position: absolute;
-  top: 32px;
-  right: 32px;
-  width: 2rem;
-  height: 2rem;
-  overflow: hidden;
+.dont-have-an {
+  color: var(--color-darkslategray-200);
+}
+.span {
+  color: var(--color-dimgray-100);
+}
+.span1 {
+  text-decoration: underline;
+}
+.dont-have-an-container {
+  position: relative;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.sign-up {
+  position: relative;
+  text-decoration: underline;
   cursor: pointer;
 }
-.sign-up-part {
-  background-color: var(--color-white);
-  width: 59.56rem;
-  height: 67.5rem;
-  flex-shrink: 0;
+
+.text {
+  flex-direction: row;
+  padding: var(--padding-11xs);
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
 }
-.image-part,
-.sign-up-mail,
-.sign-up-part {
+.sign-up-redirect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.sign-in {
+  width: 46.44rem;
+  height: 64rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.image-icon,
+.login,
+.sign-in {
   position: relative;
   overflow: hidden;
 }
-.image-part {
-  background-color: var(--color-lightblue);
-  width: 60.38rem;
-  height: 67.5rem;
+.image-icon {
+  width: 43.63rem;
+  height: 63.88rem;
   flex-shrink: 0;
+  z-index: 0;
 }
-.sign-up-mail {
+.login {
   background-color: var(--color-white);
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-500);
+  font-family: var(--font-poppins);
 }

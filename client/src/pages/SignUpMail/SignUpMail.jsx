@@ -1,26 +1,12 @@
-import { useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import EmailContainer from "../../components/EmailContainer/EmailContainer";
+import SignInContainer from "../../components/SignInContainer/SignInContainer";
 import "./SignUpMail.css";
+
 const SignUpMail = () => {
-  const navigate = useNavigate();
-
-  const onCloseBtnIconClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
   return (
-    <div className="sign-up-mail">
-      <div className="sign-up-part">
-        <img
-          className="close-btn-icon"
-          alt=""
-          src="/close-btn.svg"
-          onClick={onCloseBtnIconClick}
-        />
-        <EmailContainer />
+    <div className="login">
+      <div className="sign-in">
+        <SignInContainer />
       </div>
-      <div className="image-part" />
     </div>
   );
 };
