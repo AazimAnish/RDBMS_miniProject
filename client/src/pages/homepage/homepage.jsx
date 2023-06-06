@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import SecondSection from "../../components/secondSection/SecondSection";
 import ClubSection from "../../components/ClubSection/ClubSection";
+import CircleSection from "../../components/CircleSection/CircleSection"
 import "./homepage.css";
 const Homepage = () => {
   // const navigate = useNavigate();
@@ -41,10 +42,7 @@ const Homepage = () => {
         </div>
         <SecondSection />
         <ClubSection />
-        <div className="circle-section">
-          <b className="join-a-circle">Join a Circle and Learn</b>
-          <img className="circle-group-icon" alt="" src="/circle-group.svg" />
-        </div>
+        <CircleSection/>
         <Footer />
       </div>
     </div>
