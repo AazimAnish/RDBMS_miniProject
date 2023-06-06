@@ -1,3 +1,100 @@
+.email-container{display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 11px 0px;
+gap: 45px;
+
+position: absolute;
+width: 528px;
+height: 591px;
+left: calc(50% - 528px/2 + 0.5px);
+top: calc(50% - 591px/2 - 0.5px);
+}
+
+.jump-sait{
+  
+width: 528px;
+height: 48px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 48px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #333333;
+}
+
+.frm{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+
+width: 528px;
+height: 298px;
+
+}
+
+.input-heading{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+width: 528px;
+height: 87px;
+
+
+}
+
+label{
+  width: 528px;
+height: 27px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+
+color: #666666;
+
+}
+
+ #user,#pass {
+  box-sizing: border-box;
+
+width: 528px;
+height: 56px;
+
+border: 1px solid rgba(102, 102, 102, 0.35);
+border-radius: 12px;
+}
+
+#btn {
+  width: 528px;
+height: 64px;
+
+background: black;
+opacity: 0.25;
+border-radius: 32px;
+color: white;
+}
+/*
+
+
+
+My edit above*/
 .sign-in2 {
   position: relative;
   font-weight: 500;

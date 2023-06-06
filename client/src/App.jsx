@@ -8,7 +8,6 @@ import Homepage from "./pages/homepage/homepage";
 import Resources from "./pages/Resources/Resources";
 import SignUpMail from "./pages/SignUpMail/SignUpMail";
 import Login from "./pages/login/login";
-import SignUpPassword from "./pages/SignUpPassword/SignUpPassword";
 import { useEffect } from "react";
 import CreateCircle from "./pages/learningCircle/createCircle/createCircle";
 import JoinCircle from "./pages/learningCircle/joinCircle/JoinCircle";
@@ -74,7 +73,6 @@ function App() {
       <Route path="/resources" element={<Resources />} />
       <Route path="/signup-mail" element={<SignUpMail />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/signup-password" element={<SignUpPassword />} />
       <Route path="/create-circle" element={<CreateCircle />} />
       <Route path="/join-circle" element={<JoinCircle />} />
     </Routes>

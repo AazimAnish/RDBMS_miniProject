@@ -1,36 +1,22 @@
-import { useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
+//import { useCallback, useState } from "react";
+//import { useNavigate } from "react-router-dom";
 import FrameComponent from "../FrameComponent/FrameComponent";
 import "./SignInContainer.css";
 
 const SignInContainer = () => {
-  const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+ // const navigate = useNavigate();
+  
 
-  const onButtonContainerClick = useCallback(() => {
-    // Handle sign in logic
-    console.log("Sign in clicked");
-  }, []);
+  // const onButtonContainerClick = useCallback(() => {
+  //   // Handle sign in logic
+  //   console.log("Sign in clicked");
+  // }, []);
 
-  const onSignUpText1Click = useCallback(() => {
-    navigate("/signup-mail");
-  }, [navigate]);
+  // const onSignUpText1Click = useCallback(() => {
+  //   navigate("/signup-mail");
+  // }, [navigate]);
 
-  const handleEmailChange = useCallback((e) => {
-    setEmail(e.target.value);
-  }, []);
-
-  const handlePasswordChange = useCallback((e) => {
-    setPassword(e.target.value);
-  }, []);
-
-  const handleSubmit = useCallback((e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted");
-  }, []);
-
+  
   return (
 		<div>
 		  <h1>LOGIN</h1>
