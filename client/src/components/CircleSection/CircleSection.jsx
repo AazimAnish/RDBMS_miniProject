@@ -1,10 +1,18 @@
+import CircleCard from "../CircleCard/CircleCard"
 import "./CircleSection.css"
 
 const CircleSection = () => {
     return(
         <div className="circle-section">
           <b className="join-a-circle">Join a Circle and Learn</b>
-          <img className="circle-group-icon" alt="" src="/circle-group.svg" />
+          <div className="circle-container">
+            <CircleCard/>
+            <CircleCard/>
+            <CircleCard/>
+            <CircleCard/>
+            <CircleCard/>
+            <CircleCard/>
+          </div>
         </div>
     )
 };
