@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="pt-14">
-            <div className="sait-is-the-container">© Hopscotch 2023</div>
+          
           </div>
         </div>
         <div className="div6">

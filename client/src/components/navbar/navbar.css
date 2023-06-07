@@ -50,7 +50,7 @@
   gap: var(--gap-3xl);
 }
 .div3 {
-  width: 71.99rem;
+  width: 66.99rem;
   display: flex;
   flex-direction: column;
   padding: 0 var(--padding-181xl);
@@ -103,7 +103,7 @@
 }
 .div4 {
   position: relative;
-  width: 13.01rem;
+  width: 14.01rem;
   height: 4.38rem;
   font-size: var(--font-size-mid);
 }
