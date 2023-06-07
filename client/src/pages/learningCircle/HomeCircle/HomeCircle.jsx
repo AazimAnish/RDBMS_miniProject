@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../../components/navbar/navbar';
 import './HomeCircle.css';
 import Footer from '../../../components/footer/footer';
+import ClubCard from '../../../components/CircleCard/CircleCard';
 
 function HomeCircle() {
   return (
@@ -14,6 +15,9 @@ function HomeCircle() {
             <button> Join </button>
             <button> Create </button>
           </div>
+        </div>
+        <div className='clubcards'>
+          < ClubCard />
         </div>
         <div className='footerlearn'>
         < Footer />

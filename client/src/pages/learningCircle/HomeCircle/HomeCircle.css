@@ -36,7 +36,7 @@
 
   .footerlearn {
     left: 77px;
-    bottom: 0px;
+    top: 900px;
     position: absolute;
     display: flex;
     flex-direction: column;

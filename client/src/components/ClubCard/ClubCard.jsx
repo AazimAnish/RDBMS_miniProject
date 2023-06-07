@@ -12,7 +12,7 @@ const ClubCard = () => {
           <div className="black-card--hover">
             <h2>SEDS</h2>
             <p>
-            SEDS CUSAT is a vibrant community of space enthusiasts who get together to discuss, explore, and have fun with the marvels of the cosmos. SEDS CUSAT organizes and coordinates a spectrum of technical competitions, engineering projects, workshops, social events, seminars, and outreach programs for the SpaceFam.
+            SEDS Cusat is a vibrant community of space enthusiasts who get together to discuss, explore, and have fun with the marvels of the cosmos. SEDS CUSAT organizes and coordinates a spectrum of technical competitions, engineering projects, workshops, social events, seminars, and outreach programs for the SpaceFam.
             </p>
             <p className="link">Click to know more</p>
           </div>
