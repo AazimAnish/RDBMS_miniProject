@@ -8,15 +8,25 @@ const ClubSection = () => {
           <div className="h2mx-auto1">
             <b className="clubs-of-soe">Clubs of SOE, Cusat</b>
           </div>
-          <div className="design-a-financial">
-            Design a financial operating system that works for your business.
-          </div>
+          
         </div>
         <div className="cards">
           <div className="divgrid1">
-            <ClubCard />
-            <ClubCard />
-            <ClubCard />
+            <ClubCard 
+            heading="SEDS CUSAT"
+            subhead="The Space Club of Cusat"
+            hidhead="SEDS CUSAT"
+            />
+            <ClubCard 
+            heading="Tinkerhub"
+            subhead="The Learning Club of Cusat"
+            hidhead="Tinkerhub"
+            />
+            <ClubCard 
+            heading="IEDC"
+            subhead="The Space Club of Cusat"
+            hidhead="IEDC"
+            />
 
               
           </div>
