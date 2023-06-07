@@ -1,88 +1,70 @@
-.seds-cusat {
-    position: relative;
-    letter-spacing: 0.32px;
-    line-height: 35.2px;
-  }
-  .club-name {
-    width: 11.94rem;
-    height: 2.27rem;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .get-paid-fast {
-    margin: 0;
-  }
-  .about-club {
-    position: relative;
-    line-height: 27.9px;
-  }
-  .p2 {
-    display: flex;
-    flex-direction: row;
-    padding: 0 0 0.04rem;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: var(--font-size-lg);
-    color: var(--color-gray-100);
-  }
-  .divpx-8 {
-    position: absolute;
-    width: 100%;
-    top: calc(50% - 241.5px);
-    right: 0;
-    left: 0;
-    height: 11.5rem;
-    display: flex;
-    flex-direction: column;
-    padding: var(--padding-28xl) var(--padding-29xl) 0;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    gap: 1.45rem;
-  }
-  .divoverflow-hidden {
-    position: absolute;
-    top: 695px;
-    left: 48px;
-    border-radius: var(--br-5xs);
-    overflow: hidden;
-  }
-  .learn-more {
-    position: relative;
-    letter-spacing: 0.17px;
-    line-height: 17px;
-    font-weight: 500;
-  }
-  .divinline-flex {
-    position: absolute;
-    bottom: 38px;
-    left: calc(50% - 68.5px);
-    background-color: var(--color-gray-300);
-    width: 8.49rem;
-    height: 2.94rem;
-    display: flex;
-    flex-direction: column;
-    padding: 0 1.43rem;
-    box-sizing: border-box;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: center;
-    font-size: var(--font-size-mid);
-    color: var(--color-white);
-  }
-  .agroupvariant2 {
-    position: relative;
-    border-radius: var(--br-5xs);
-    background-color: var(--color-lavender);
-    width: 30.81rem;
-    height: 32.56rem;
-    text-align: left;
-    font-size: var(--font-size-13xl);
-    color: var(--color-gray-300);
-    font-family: var(--font-roboto);
-  }
-  
+.black-card-container .black-card.card--dark {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
+.black-card-container .black-card.card--dark a {
+  padding: 30px;
+  width: 300px;
+  height: 400px;
+  border: 2px solid black;
+  background: black;
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.25s ease;
+}
+
+.black-card-container .black-card.card--dark a:hover {
+  transform: translate(-30px, -30px);
+  border-color: #5bc0eb;
+}
+
+.black-card-container .black-card.card--dark a:hover .black-card--display {
+  display: none;
+}
+
+.black-card-container .black-card.card--dark a:hover .black-card--hover {
+  display: block;
+}
+
+.black-card-container .black-card.card--dark a .black-card--display i {
+  font-size: 30px;
+  margin-top: 80px; /* Adjusted the margin-top value */
+}
+
+.black-card-container .black-card.card--dark a .black-card--display h2 {
+  margin: 20px 0;
+  font-size: 24px; /* Adjusted the font-size value */
+}
+
+.black-card-container .black-card.card--dark a .black-card--hover {
+  display: none;
+}
+
+.black-card-container .black-card.card--dark a .black-card--hover h2 {
+  margin: 20px 0;
+}
+
+.black-card-container .black-card.card--dark a .black-card--hover p {
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: medium;
+}
+
+.black-card-container .black-card.card--dark a .black-card--hover p.link {
+  margin: 20px 0 0;
+  font-weight: bold;
+  color: #5bc0eb;
+}
+
+.black-card-container .black-card.card--dark .black-card--border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: 2px dashed black;
+  z-index: -1;
+}

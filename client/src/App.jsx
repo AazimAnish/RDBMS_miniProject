@@ -11,6 +11,8 @@ import Login from "./pages/login/login";
 import { useEffect } from "react";
 import CreateCircle from "./pages/learningCircle/createCircle/createCircle";
 import JoinCircle from "./pages/learningCircle/joinCircle/JoinCircle";
+import HomeCircle from "./pages/learningCircle/HomeCircle/HomeCircle";
+
 
 
 function App() {
@@ -50,6 +52,18 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/home-circle":
+          title = "";
+          metaDescription = "";
+          break;
+      case "/join-circle":
+          title = "";
+          metaDescription = "";
+          break;
+      case "/create-circle":
+          title = "";
+          metaDescription = "";
+          break;
     }
 
     if (title) {
@@ -75,6 +89,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/create-circle" element={<CreateCircle />} />
       <Route path="/join-circle" element={<JoinCircle />} />
+      <Route path="/home-circle" element={<HomeCircle />} />
     </Routes>
     
   );

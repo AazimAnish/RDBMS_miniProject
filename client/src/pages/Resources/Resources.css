@@ -2,11 +2,13 @@
   position: relative;
   line-height: 57.5px;
 }
+
 .divflex1,
 .h3t-50 {
   position: absolute;
   left: 0;
 }
+
 .h3t-50 {
   top: -1px;
   display: flex;
@@ -15,6 +17,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .divflex1 {
   top: 0;
   width: 75rem;
@@ -22,6 +25,7 @@
   font-size: var(--font-size-53xl);
   color: var(--color-gray-300);
 }
+
 .switch-child,
 .switch-item {
   position: absolute;
@@ -29,16 +33,19 @@
   border-radius: var(--br-mini);
   height: 3.31rem;
 }
+
 .switch-child {
   left: 0;
   background-color: #d9d9d9;
   width: 12.5rem;
 }
+
 .switch-item {
   left: 100px;
   background-color: var(--color-khaki);
   width: 6.25rem;
 }
+
 .notes {
   top: 20px;
   left: 33px;
@@ -47,11 +54,13 @@
   align-items: center;
   width: 2.06rem;
 }
+
 .notes,
 .qpaper,
 .switch {
   position: absolute;
 }
+
 .qpaper {
   top: 20px;
   left: 127px;
@@ -60,6 +69,7 @@
   align-items: center;
   width: 2.81rem;
 }
+
 .switch {
   top: 115px;
   left: 490px;
@@ -67,6 +77,7 @@
   height: 3.31rem;
   font-size: var(--font-size-xs);
 }
+
 .folder-child {
   position: absolute;
   top: 0;
@@ -75,6 +86,7 @@
   width: 16.88rem;
   height: 4.38rem;
 }
+
 .dsa {
   position: absolute;
   top: 20px;
@@ -86,6 +98,7 @@
   width: 7.5rem;
   height: 1.88rem;
 }
+
 .onedrive-folder-icon-1 {
   position: absolute;
   top: 12.13px;
@@ -94,25 +107,75 @@
   height: 2.92rem;
   object-fit: cover;
 }
+
 .div,
 .folder,
-.folder1 {
+.folder1,
+.folder2,
+.folder3,
+.folder4,
+.folder5,
+.folder6,
+.folder7 {
   position: absolute;
   top: 291px;
   left: 42px;
   width: 16.88rem;
   height: 4.38rem;
 }
+
 .div,
 .folder1 {
   left: 465px;
 }
+
 .div {
   top: 183px;
   left: 339px;
   width: 75rem;
   height: 45.16rem;
 }
+
+.folder {
+  top: 291px;
+  left: 42px;
+}
+
+.folder1 {
+  top: 291px;
+  left: 465px;
+}
+
+.folder2 {
+  top: 291px;
+  left: 884px;
+}
+
+.folder3 {
+  top: 398px;
+  left: 42px
+}
+
+.folder4 {
+  top: 398px;
+  left: 465px;
+}
+
+.folder5 {
+  top: 398px;
+  left: 884px;
+}
+
+.folder6 {
+  top: 505px;
+  left: 42px;
+}
+
+.folder7 {
+  top: 505px;
+  left: 465px;
+}
+
 .resources {
   position: relative;
   background-color: var(--color-whitesmoke-100);
@@ -124,3 +187,4 @@
   color: var(--color-black);
   font-family: var(--font-roboto);
 }
+

@@ -13,8 +13,8 @@ const Footer = () => {
       <div className="signup-container">
         <div className="text1">
           <b className="ready-to-level-container">
-            <p className="ready-to-level">Ready to level up your</p>
-            <p className="ready-to-level">Academics?</p>
+                     <p style={{fontSize: '30px'}}  className="ready-to-level">Ready to level up your Academics?</p>
+
           </b>
         </div>
         <div className="signup-button" onClick={onSignupButtonContainerClick}>

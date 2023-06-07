@@ -1,0 +1,5 @@
+.circle-container{
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+}
