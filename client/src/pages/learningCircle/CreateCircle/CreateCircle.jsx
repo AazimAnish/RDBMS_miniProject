@@ -7,6 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 
 const CreateCircle = () => {
@@ -210,6 +211,25 @@ const CreateCircle = () => {
                 /> */}
               </div>
             </div>
+
+            <Button
+              sx={{ minWidth: 300, maxWidth: 300, margin: 1.5, marginLeft: 0 }}
+              // disabled={
+              //   create.phone &&
+              //   create.phone.length >= 10 &&
+              //   college &&
+              //   verify &&
+              //   confirm === create.passcode
+              //     ? false
+              //     : true
+              // }
+              // onClick={() => {
+              //   postData();
+              // }}
+              variant="contained"
+            >
+              Create Circle
+            </Button>
 
 
         </div>
