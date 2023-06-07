@@ -2,12 +2,13 @@ import React from "react";
 import './CreateCircle.css';
 import Navbar from "../../../Components/Navbar/Navbar";
 import learncircle from '../../../../public/learningcircles.jpg'
-import Box from "@mui/material/Box";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Select from "@mui/material/Select";
+// import Box from "@mui/material/Box";
+// import FormControl from "@mui/material/FormControl";
+// import InputLabel from "@mui/material/InputLabel";
+// import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Footer from "../../../components/footer/footer";
 
 
 const CreateCircle = () => {
@@ -233,6 +234,8 @@ const CreateCircle = () => {
 
 
         </div>
+
+        < Footer />
 
                 </div>
   );
