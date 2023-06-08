@@ -10,6 +10,8 @@ import SignUpMail from "./pages/SignUpMail/SignUpMail";
 import Login from "./pages/login/login";
 import { useEffect } from "react";
 import HomeCircle from "./pages/learningCircle/HomeCircle/HomeCircle";
+import CreateCircle from "./pages/learningCircle/CreateCircle/CreateCircle";
+import JoinCircle from "./pages/learningCircle/JoinCircle/JoinCircle";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
 

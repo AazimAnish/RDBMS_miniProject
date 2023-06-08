@@ -1,7 +1,6 @@
 import React from "react";
 import './HomeCircle.css';
-import Navbar from "../../../Components/Navbar/Navbar";
-import learncircle from '../../../../public/learningcircles.jpg'
+import Navbar from "../../../Components/Navbar/Navbar"
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
 // import InputLabel from "@mui/material/InputLabel";

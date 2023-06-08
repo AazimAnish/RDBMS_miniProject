@@ -1,4 +1,6 @@
-import Navbar from "../../components/navbar/navbar";
+import Navbar from "../../Components/Navbar/Navbar"
+
+
 
 const ProfilePage = () => {
     return(

@@ -1,7 +1,7 @@
 import React from "react";
 import './JoinCircle.css';
 import Navbar from "../../../Components/Navbar/Navbar";
-import learncircle from '../../../../public/learningcircles.jpg'
+import learncircle from '../../../assets/learningcircles.jpg'
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
 // import InputLabel from "@mui/material/InputLabel";
