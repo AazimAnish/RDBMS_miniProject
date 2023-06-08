@@ -32,7 +32,7 @@ const CreateCircle = () => {
               the learners in the circle. So what are you waiting for? Click and
               create a circle now.
             </p>
-            <a href="/join" rel="noopener noreferrer">
+            <a href="/join-circle" rel="noopener noreferrer">
               <button className= 'search_button'>
                 Join
               </button>

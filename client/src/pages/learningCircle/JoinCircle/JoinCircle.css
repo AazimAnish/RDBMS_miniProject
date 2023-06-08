@@ -35,6 +35,12 @@
     /* align-items: flex-start;
     justify-self: center; */
   }
+
+  .ff_form_fields {
+    top: 140px;
+    right: 400px;
+    position: relative;
+  }
   
   .second_form_section,
   .first_form_section {
@@ -117,5 +123,10 @@
     .first_view_container {
       justify-content: center;
     }
+  }
+
+  .joincirclebutton {
+    position: relative;
+    top: 75px;
   }
   

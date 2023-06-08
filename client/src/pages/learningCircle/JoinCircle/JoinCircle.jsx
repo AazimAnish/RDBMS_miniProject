@@ -32,7 +32,7 @@ const CreateCircle = () => {
               your circle lead. If you already have them fill them out, and you are
               good to go!.
             </p>
-            <a href="/create" rel="noopener noreferrer">
+            <a href="/create-circle" rel="noopener noreferrer">
               <button className= 'search_button'>
                 create
               </button>
@@ -212,7 +212,7 @@ const CreateCircle = () => {
               </div>
             </div>
 
-            <Button
+            <Button className="joincirclebutton"
               sx={{ minWidth: 300, maxWidth: 300, margin: 1.5, marginLeft: 0 }}
               // disabled={
               //   create.phone &&
