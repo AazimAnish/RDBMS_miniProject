@@ -13,9 +13,11 @@ const ClubSection = () => {
         <div className="cards">
           <div className="divgrid1">
             <ClubCard 
+            link="https://sedscusat.org/"
             heading="SEDS CUSAT"
             subhead="The Space Club of Cusat"
             hidhead="SEDS CUSAT"
+            details="SEDS Cusat is a vibrant community of space enthusiasts who get together to discuss, explore, and have fun with the marvels of the cosmos. SEDS CUSAT organizes and coordinates a spectrum of technical competitions, engineering projects, workshops, social events, seminars, and outreach programs for the SpaceFam."
             />
             <ClubCard 
             heading="Tinkerhub"

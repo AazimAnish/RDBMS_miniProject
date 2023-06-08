@@ -90,6 +90,8 @@ function App() {
       <Route path="/create-circle" element={<CreateCircle />} />
       <Route path="/join-circle" element={<JoinCircle />} />
       <Route path="/home-circle" element={<HomeCircle />} />
+    
+
     </Routes>
     
   );
