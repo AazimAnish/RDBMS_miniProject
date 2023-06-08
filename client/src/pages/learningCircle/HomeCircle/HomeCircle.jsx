@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../../../components/navbar/navbar';
 import './HomeCircle.css';
 import Footer from '../../../components/footer/footer';
 import ClubCard from '../../../components/CircleCard/CircleCard';
+import Navbar from '../../../Components/Navbar/Navbar';
 
 function HomeCircle() {
   return (

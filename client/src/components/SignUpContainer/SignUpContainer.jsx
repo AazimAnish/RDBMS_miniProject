@@ -1,7 +1,6 @@
 //import { useCallback, useState } from "react";
 //import { useNavigate } from "react-router-dom";
-import FrameComponent from "../FrameComponent/FrameComponent";
-import "./SignInContainer.css";
+import "./SignUpContainer.css";
 
 const SignInContainer = () => {
  // const navigate = useNavigate();
@@ -20,11 +19,23 @@ const SignInContainer = () => {
   return (
     <div className="email-container">
       <h1 className="jump-sait">Jump Into SAIT</h1>
-      <div className="frm">
+      <div className="sign_in-frm">
         <form action="http://localhost/RDBMS_MINIPROJECT/server/login.php" method="post">
           <p className="input-heading">
             <label htmlFor="user">Username:</label>
             <input type="text" id="user" name="user" />
+          </p>
+          <p className="input-heading">
+            <label htmlFor="user">Email:</label>
+            <input type="email" id="user" name="user" />
+          </p>
+          <p className="input-heading">
+            <label htmlFor="user">Register Number:</label>
+            <input type="number" id="user" name="user" min="10000000" max="99999999"/>
+          </p>
+          <p className="input-heading">
+            <label htmlFor="user">Phone Number</label>
+            <input type="tel" id="user" name="user" pattern="[1-9]{1}[0-9]{9}" />
           </p>
           
           <p className="input-heading">
@@ -32,18 +43,13 @@ const SignInContainer = () => {
             <input type="password" id="pass" name="pass" />
           </p>
           <p>
-            <input type="submit" id="btn" value="Login" />
+            <input type="submit" id="btn" value="Sign Up" />
           </p>
         </form>
       </div>
-      <FrameComponent
-        socialMediaLogo="/social-media-logo1.svg"
-        propAlignItems="flex-start"
-        propJustifyContent="flex-start"
-        propWidth="35.5rem"
-        propCursor="pointer"
-      />
-      </div>
-)} 
+      
+    </div>
+  );
+};
 
 export default SignInContainer;

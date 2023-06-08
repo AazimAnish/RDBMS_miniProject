@@ -8,15 +8,27 @@ const ClubSection = () => {
           <div className="h2mx-auto1">
             <b className="clubs-of-soe">Clubs of SOE, Cusat</b>
           </div>
-          <div className="design-a-financial">
-            Design a financial operating system that works for your business.
-          </div>
+          
         </div>
         <div className="cards">
           <div className="divgrid1">
-            <ClubCard />
-            <ClubCard />
-            <ClubCard />
+            <ClubCard 
+            link="https://sedscusat.org/"
+            heading="SEDS CUSAT"
+            subhead="The Space Club of Cusat"
+            hidhead="SEDS CUSAT"
+            details="SEDS Cusat is a vibrant community of space enthusiasts who get together to discuss, explore, and have fun with the marvels of the cosmos. SEDS CUSAT organizes and coordinates a spectrum of technical competitions, engineering projects, workshops, social events, seminars, and outreach programs for the SpaceFam."
+            />
+            <ClubCard 
+            heading="Tinkerhub"
+            subhead="The Learning Club of Cusat"
+            hidhead="Tinkerhub"
+            />
+            <ClubCard 
+            heading="IEDC"
+            subhead="The Space Club of Cusat"
+            hidhead="IEDC"
+            />
 
               
           </div>

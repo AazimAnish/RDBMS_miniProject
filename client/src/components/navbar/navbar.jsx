@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="login2">Login</div>
           </div>
           <div className="get-started" onClick={onGetStartedContainerClick}>
-            <div className="divw-full2">
+            <div className="nav-divw-full2">
               <div className="get-started1">Get started</div>
             </div>
           </div>

@@ -1,11 +1,11 @@
-import SignInContainer from "../../components/SignInContainer/SignInContainer";
+import SignUpContainer from "../../components/SignUpContainer/SignUpContainer";
 import "./SignUpMail.css";
 
 const SignUpMail = () => {
   return (
     <div className="login">
       <div className="sign-in">
-        <SignInContainer />
+        <SignUpContainer />
       </div>
     </div>
   );
