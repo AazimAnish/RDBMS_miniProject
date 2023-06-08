@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Footer from "../../../components/footer/footer";
 
 
-const CreateCircle = () => {
+const JoinCircle = () => {
   return (
     <div className="container">
       <div className="navbar">
@@ -50,7 +50,7 @@ const CreateCircle = () => {
                 Type in your circle name to verify it to join a learning circle
                 </p>
               </div>
-              <div className='ff_form_fields'>
+              <div className='ff_form_fields_join'>
                 <TextField
                   sx={{
                     minWidth: 300,
@@ -240,4 +240,4 @@ const CreateCircle = () => {
   );
 };
 
-export default CreateCircle;
+export default JoinCircle;

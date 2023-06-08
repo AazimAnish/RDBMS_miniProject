@@ -9,9 +9,9 @@ import Resources from "./pages/Resources/Resources";
 import SignUpMail from "./pages/SignUpMail/SignUpMail";
 import Login from "./pages/login/login";
 import { useEffect } from "react";
-import CreateCircle from "./pages/learningCircle/createCircle/createCircle";
-import JoinCircle from "./pages/learningCircle/joinCircle/JoinCircle";
 import HomeCircle from "./pages/learningCircle/HomeCircle/HomeCircle";
+import CreateCircle from "./pages/learningCircle/CreateCircle/CreateCircle";
+import JoinCircle from "./pages/learningCircle/JoinCircle/JoinCircle";
 
 
 
