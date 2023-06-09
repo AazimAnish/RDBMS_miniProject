@@ -1,5 +1,9 @@
 .circle-container{
-    display: flex;
-    flex-direction: row;
-    flex-basis: auto;
+    width: auto;
+    display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+      grid-template-rows: repeat(2, 1fr); /* Two equal-height rows */
+      gap: 80px;
+      font-size:x-large;
 }
+
