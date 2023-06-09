@@ -48,17 +48,20 @@ const CreateCircle = () => {
                   <button className='fsobtn'>Join Existing Circles</button>
       </a>
               </div>
-
-              {/* <CircleSection/> */}
+              
               </div>
 
-          
+
+          <div className = "circleSection">
+              <CircleSection/>
+              </div>
 
 
      </div>
            
-
+    <div className='footerSection'>
         < Footer />
+        </div>
 
                 </div>
     </div>

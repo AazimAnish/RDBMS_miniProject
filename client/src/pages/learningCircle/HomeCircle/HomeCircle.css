@@ -547,4 +547,15 @@ p {
     align-items: center;
     justify-content: space-between;
   }
+
+  .circleSection {
+    top: 900px;
+    right: 415px;
+    position: relative;
+  }
+
+  .footerSection {
+    position: relative;
+    top: 840px;
+  }
   
