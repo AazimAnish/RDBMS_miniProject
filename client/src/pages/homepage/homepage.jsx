@@ -1,11 +1,11 @@
 //import { useCallback } from "react";
-import Navbar from "../../components/navbar/navbar";
 //import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/footer";
 import SecondSection from "../../components/secondSection/SecondSection";
 import ClubSection from "../../components/ClubSection/ClubSection";
 import CircleSection from "../../components/CircleSection/CircleSection"
 import "./homepage.css";
+import Navbar from "../../Components/Navbar/Navbar";
 const Homepage = () => {
   // const navigate = useNavigate();
 
