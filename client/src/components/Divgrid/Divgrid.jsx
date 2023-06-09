@@ -6,8 +6,8 @@ const Divgrid = () => {
         <img className="svg-icon" alt="" src="/svg@2x.png" />
         <div className="h3t-32">
           <b className="create-and-send-container">
-            <p className="create-and-send">Create and send</p>
-            <p className="create-and-send">invoices in seconds</p>
+            <p className="create-and-send">Explore your interest</p>
+            <p className="create-and-send">Join Clubs, Work Together</p>
           </b>
         </div>
         <div className="join-clubs">Join Clubs</div>
@@ -16,8 +16,8 @@ const Divgrid = () => {
         <img className="svg-icon" alt="" src="/svg1@2x.png" />
         <div className="h3t-321">
           <b className="create-and-send-container">
-            <p className="create-and-send">Pay bills on time</p>
-            <p className="create-and-send">without missing a beat</p>
+            <p className="create-and-send">Learn Together</p>
+            <p className="create-and-send">Join a Clan to Learn Together</p>
           </b>
         </div>
         <div className="join-circles">Join Circles</div>
@@ -26,8 +26,8 @@ const Divgrid = () => {
         <img className="svg-icon2" alt="" src="/svg2@2x.png" />
         <div className="h3t-322">
           <b className="create-and-send-container">
-            <p className="create-and-send">Control your cash</p>
-            <p className="create-and-send">flow on-demand</p>
+            <p className="create-and-send">From Notes to Questions,</p>
+            <p className="create-and-send">Download What you Need</p>
           </b>
         </div>
         <div className="find-resources">Find Resources</div>
