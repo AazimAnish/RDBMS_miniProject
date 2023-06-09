@@ -256,4 +256,5 @@
   font-size: var(--font-size-45xl);
   color: var(--color-white);
   font-family: var(--font-roboto);
+  padding-bottom: 10px;
 }
