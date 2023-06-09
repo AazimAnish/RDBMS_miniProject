@@ -6,7 +6,6 @@
     flex-shrink: 0;
   }
   .clubs-of-soe,
-  .design-a-financial,
   .h2mx-auto1 {
     display: flex;
     align-items: center;
@@ -17,16 +16,7 @@
     height: 7.19rem;
     flex-direction: column;
   }
-  .design-a-financial {
-    position: relative;
-    font-size: var(--font-size-xl);
-    line-height: 31px;
-    font-family: var(--font-inter);
-    color: var(--color-gray-700);
-    width: 38.49rem;
-    height: 1.5rem;
-    flex-shrink: 0;
-  }
+  
   .divw-full2 {
     width: 100%;
     height: 10.63rem;
@@ -39,103 +29,17 @@
     gap: var(--gap-8xl);
     background-color: aliceblue;
   }
-  .seds-cusat1 {
-    position: relative;
-    letter-spacing: 0.32px;
-    line-height: 35.2px;
+ 
+
+  
+  .cardgrid {
+
+    width: auto;
+    display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+      grid-template-rows: repeat(2, 1fr); /* Two equal-height rows */
+      gap: 75px;;
   }
-  .club-name1 {
-    width: 11.94rem;
-    height: 2.27rem;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .get-paid-fast1 {
-    margin: 0;
-  }
-  .about-club1 {
-    position: relative;
-    line-height: 27.9px;
-  }
-  .p3 {
-    display: flex;
-    flex-direction: row;
-    padding: 0 0 0.04rem;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: var(--font-size-lg);
-    color: var(--color-gray-100);
-  }
-  .divpx-81 {
-    position: absolute;
-    width: 100%;
-    top: calc(50% - 241.5px);
-    right: 0;
-    left: 0;
-    height: 11.5rem;
-    display: flex;
-    flex-direction: column;
-    padding: var(--padding-28xl) var(--padding-29xl) 0;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    gap: 1.45rem;
-  }
-  .divoverflow-hidden1 {
-    position: absolute;
-    top: 695px;
-    left: 48px;
-    border-radius: var(--br-5xs);
-    overflow: hidden;
-  }
-  .learn-more1 {
-    position: relative;
-    letter-spacing: 0.17px;
-    line-height: 17px;
-    font-weight: 500;
-  }
-  .divinline-flex1 {
-    position: absolute;
-    bottom: 38px;
-    left: calc(50% - 68.5px);
-    background-color: var(--color-gray-300);
-    width: 8.49rem;
-    height: 2.94rem;
-    display: flex;
-    flex-direction: column;
-    padding: 0 1.43rem;
-    box-sizing: border-box;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: center;
-    font-size: var(--font-size-mid);
-    color: var(--color-white);
-  }
-  .agroupvariant21,
-  .agroupvariant23 {
-    position: relative;
-    border-radius: var(--br-5xs);
-    background-color: var(--color-lavender);
-    width: 30.81rem;
-    height: 32.56rem;
-  }
-  .agroupvariant23 {
-    display: none;
-  }
-  .divgrid1 {
-    flex: 1;
-    width: 111.69rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: var(--gap-61xl);
-  }
-  .cards,
   .club-section,
   .divcontainer {
     display: flex;
@@ -143,8 +47,7 @@
     align-items: center;
   }
   .cards {
-    width: 111.69rem;
-    justify-content: flex-start;
+    width: 100%;
     gap: var(--gap-29xl);
     text-align: left;
     font-size: var(--font-size-13xl);
@@ -156,7 +59,7 @@
     box-sizing: border-box;
   }
   .divcontainer {
-    width: 111.69rem;
+    width: 100%;
     height: auto;
     padding: var(--padding-11xs) 0;
     justify-content: center;
