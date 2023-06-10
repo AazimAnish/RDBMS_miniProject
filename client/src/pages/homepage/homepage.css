@@ -102,7 +102,6 @@
 .divrelative-icon {
   position: relative;
   width: 32.06rem;
-  height: 36.86rem;
   object-fit: cover;
 }
 .divflex,
@@ -288,16 +287,6 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-}
-.club-section {
-  background-color: var(--color-white);
-  width: 120rem;
-  height: 106.06rem;
-  overflow: hidden;
-  flex-direction: column;
-  padding: 5.63rem 0;
-  box-sizing: border-box;
-  justify-content: flex-start;
 }
 
 .circle-group-icon {

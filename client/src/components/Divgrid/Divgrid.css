@@ -1,6 +1,5 @@
 .svg-icon {
   position: absolute;
-  height: calc(100% - 239.31px);
   width: calc(100% - 408.81px);
   top: 35px;
   right: 40px;
@@ -87,12 +86,10 @@
   height: 23.75rem;
 }
 .svg-icon2 {
-  height: calc(100% - 70px);
-  width: calc(100% - 607px);
+ 
   top: 60.39px;
   right: 0;
   bottom: 9.61px;
-  left: 607px;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;

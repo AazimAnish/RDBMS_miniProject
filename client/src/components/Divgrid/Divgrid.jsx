@@ -23,8 +23,8 @@ const Divgrid = () => {
         <div className="join-circles">Join Circles</div>
       </div>
       <div className="agroup2">
-        <img className="svg-icon2" alt="" src="/svg2@2x.png" />
-        <div className="h3t-322">
+      <img className="svg-icon2" alt="" src="/svg2@2x.png" />
+  <div className="h3t-322">
           <b className="create-and-send-container">
             <p className="create-and-send">From Notes to Questions,</p>
             <p className="create-and-send">Download What you Need</p>
