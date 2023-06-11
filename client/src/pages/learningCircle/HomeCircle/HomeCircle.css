@@ -14,6 +14,9 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    bottom: 300px;
+    position: relative;
+    bottom: 550px;
   }
   
   .fsheading {
@@ -556,6 +559,20 @@ p {
 
   .footerSection {
     position: relative;
-    top: 840px;
+    top: 350px;
   }
   
+  .homeimg {
+    position: relative;
+    top: 30px;
+    left: 30px;
+  }
+
+  .mimagehome {
+    max-width: 25rem;
+    display: block;
+    margin: auto;
+    top: 230px;
+    position: relative;
+    left: 300px;
+  }
