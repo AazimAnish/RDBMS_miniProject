@@ -9,6 +9,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Footer from "../../../components/footer/footer";
 import CircleSection from "../../../components/CircleSection/CircleSection";
+import learnhomeimg from '../../../../public/learnhomeimg.png'
 
 
 
@@ -20,6 +21,7 @@ const CreateCircle = () => {
       </div>
 
       <div className= 'first_view_container_home'>
+      <img src={learnhomeimg} alt="" className= 'mimagehome' />
           <div className= 'first_section'>
             <div className= 'fstexts'>
               <p className= 'fsheading'>
@@ -37,7 +39,6 @@ const CreateCircle = () => {
                 interests!
               </p>
 
-      
 
 
       <div className='buttons'>
