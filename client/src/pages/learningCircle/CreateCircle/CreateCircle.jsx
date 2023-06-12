@@ -1,7 +1,7 @@
 import React from "react";
 import './CreateCircle.css';
 import Navbar from "../../../Components/Navbar/Navbar";
-import create from '../../../../public/create.png'
+import create from '../../../assets/create.png'
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
 // import InputLabel from "@mui/material/InputLabel";

@@ -1,7 +1,7 @@
 import React from "react";
 import './JoinCircle.css';
 import Navbar from "../../../Components/Navbar/Navbar";
-import join from '../../../../public/join.png'
+import join from '../../../assets/join.png'
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
 // import InputLabel from "@mui/material/InputLabel";
