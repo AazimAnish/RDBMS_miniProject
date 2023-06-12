@@ -134,19 +134,8 @@
 .second-section {
   height: 49.75rem;
 }
-.clubs-of-soe {
-  position: relative;
-  line-height: 57.5px;
-  width: 43.89rem;
-  height: 6.78rem;
-  flex-shrink: 0;
-}
 
-.h2mx-auto1 {
-  width: 45.13rem;
-  height: 7.19rem;
-  flex-direction: column;
-}
+
 .design-a-financial {
   position: relative;
   font-size: var(--font-size-xl);
