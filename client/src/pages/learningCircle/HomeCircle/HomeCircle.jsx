@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import './HomeCircle.css';
 import Navbar from "../../../Components/Navbar/Navbar"
@@ -9,7 +10,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Footer from "../../../components/footer/footer";
 import CircleSection from "../../../components/CircleSection/CircleSection";
-import learnhomeimg from '../../../../public/learnhomeimg.png'
+import learnhomeimg from '../../../assets/learnhomeimg.png'
 
 
 
