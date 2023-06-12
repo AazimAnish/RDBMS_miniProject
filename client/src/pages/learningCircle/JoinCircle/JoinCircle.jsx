@@ -1,7 +1,7 @@
 import React from "react";
 import './JoinCircle.css';
 import Navbar from "../../../Components/Navbar/Navbar";
-import learncircle from '../../../assets/learningcircles.jpg'
+import join from '../../../../public/join.png'
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
 // import InputLabel from "@mui/material/InputLabel";
@@ -21,7 +21,7 @@ const JoinCircle = () => {
 
       <div className= 'main_container'>
         <div className= 'first_view_container'>
-          <img src={learncircle} alt="" className= 'mimage' />
+          <img src={join} alt="" className= 'mimage' />
           <div className= 'fsview'>
             <p className= 'fsheading'>
               Let's Join <br /> <span>Learning Circles</span>
