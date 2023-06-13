@@ -1,5 +1,5 @@
 .black-card-container .black-card.card--dark {
-  color: white;
+  color: #000000;
   background-color: black;
   border-color: black;
   width: fit-content;
@@ -14,7 +14,7 @@
   border: 2px solid black;
   background: black;
   text-decoration: none;
-  color: white;
+  color: #1c1a1f;
   display: block;
   transition: 0.25s ease;
   border-radius: 5%;

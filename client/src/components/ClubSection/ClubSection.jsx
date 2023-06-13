@@ -5,30 +5,35 @@ const ClubSection = () => {
 const clubs = [{id: "1",
 link:"https://sedscusat.org/",
 heading:"SEDS CUSAT",
+color:"#e1e7f9",
 subhead:"The Space Club of Cusat",
 hidhead:"SEDS CUSAT",
 details:"SEDS Cusat is a vibrant community of space enthusiasts who get together to discuss, explore, and have fun with the marvels of the cosmos. SEDS CUSAT organizes and coordinates a spectrum of technical competitions, engineering projects, workshops, social events, seminars, and outreach programs for the SpaceFam.",
 },{id: "2",
 link:"https://www.tinkerhub.org/",
 heading:"Tinkerhub",
+color:"#f1e6fe",
 subhead:"The Learning Club of Cusat",
 hidhead:"Tinkerhub",
 details:"We’re a community of tinkerers, makers, policy geeks & students, and are working towards mapping and empowering people who share a passion to innovate.",
 },{id:"3",
 link:"https://www.iedccusat.org/",
 heading:"IEDC",
+color:"#e3f7ea",
 subhead:"The Space Club of Cusat",
 hidhead:"IEDC",
 details:"IEDC CUSAT is a government-funded organization that aims to promote entrepreneurship among students and young professionals in India.",
 },{id:"4",
 link:"https://sedscusat.org/",
 heading:"SEDS CUSAT",
+color:"#ffe6e6",
 subhead:"The Space Club of Cusat",
 hidhead:"SEDS CUSAT",
 details:"SEDS Cusat is a vibrant community of space enthusiasts who get together to discuss, explore, and have fun with the marvels of the cosmos. SEDS CUSAT organizes and coordinates a spectrum of technical competitions, engineering projects, workshops, social events, seminars, and outreach programs for the SpaceFam.",
 },{id: "5",
 link:"https://www.tinkerhub.org/",
 heading:"Tinkerhub",
+color:"#e1e7f9",
 subhead:"The Learning Club of Cusat",
 hidhead:"Tinkerhub",
 details:"We’re a community of tinkerers, makers, policy geeks & students, and are working towards mapping and empowering people who share a passion to innovate.",
@@ -36,6 +41,7 @@ details:"We’re a community of tinkerers, makers, policy geeks & students, and 
   id:"6",
 link:"https://www.iedccusat.org/",
 heading:"IEDC",
+color:"#e1e7f9",
 subhead:"The Space Club of Cusat",
 hidhead:"IEDC",
 details:"IEDC CUSAT is a government-funded organization that aims to promote entrepreneurship among students and young professionals in India.",
@@ -61,6 +67,7 @@ details:"IEDC CUSAT is a government-funded organization that aims to promote ent
                 subhead={club.subhead}
                 hidhead={club.hidhead}
                 details={club.details}
+                color={club.color}
               />
             ))}
             
