@@ -1,0 +1,49 @@
+.circle-details {
+    margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .circle-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .meeting-time,
+  .meeting-place,
+  .mode-of-meet {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .member-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .member-list li {
+    margin-bottom: 10px;
+  }
+  
+  .attendance-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .attendance-list li {
+    width: 50%;
+  }
+  
+  .mark-attendance {
+    margin-top: 10px;
+  }
+  
+  .submit {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  

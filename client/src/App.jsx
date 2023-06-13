@@ -13,6 +13,8 @@ import HomeCircle from "./pages/learningCircle/HomeCircle/HomeCircle";
 import CreateCircle from "./pages/learningCircle/CreateCircle/CreateCircle";
 import JoinCircle from "./pages/learningCircle/JoinCircle/JoinCircle";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import CirclePage from "./pages/learningCircle/CirclePage/CirclePage";
+
 
 
 function App() {
@@ -64,6 +66,10 @@ function App() {
           title = "";
           metaDescription = "";
           break;
+      case "/circle-details":
+            title = "";
+            metaDescription = "";
+            break;
       case "/profile-page":
           title = "";
           metaDescription="";
@@ -95,7 +101,7 @@ function App() {
       <Route path="/join-circle" element={<JoinCircle />} />
       <Route path="/home-circle" element={<HomeCircle />} />
       <Route path="/profile-page" element={<ProfilePage />} />
-
+      <Route path="/circle-details" element={<CirclePage />} />
     </Routes>
     
   );
