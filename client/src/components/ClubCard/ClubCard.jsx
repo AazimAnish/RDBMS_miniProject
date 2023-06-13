@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import "./ClubCard.css"
 
-const ClubCard = ({heading,link,subhead,hidhead,details,color}) => {
+const ClubCard = ({heading,link,subhead,hidhead,details,color,image}) => {
   return (
     <div className="black-card-container">
       <div className="black-card card--dark" style={{ backgroundColor: color }}>
@@ -10,7 +10,8 @@ const ClubCard = ({heading,link,subhead,hidhead,details,color}) => {
           <div className="black-card--display">
             <i className="black-material-icons">{heading}</i>
             <h2>{subhead}</h2>
-            
+            <img src={image} className="img-fluid"alt="club-logo" />
+
           </div>
           <div className="black-card--hover">
             <h2>{hidhead}</h2>
