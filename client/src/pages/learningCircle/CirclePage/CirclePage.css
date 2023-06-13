@@ -53,3 +53,16 @@
     font-weight: 700;
     font-family: "Noto Sans", sans-serif;
   }
+
+  .details-text, .member-list, .date {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    max-width: 35rem;
+    margin-top: 1rem;
+  }
+
+  .headings {
+    font-size: 1.45rem;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+  }
