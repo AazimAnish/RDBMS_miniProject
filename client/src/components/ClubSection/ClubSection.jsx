@@ -5,6 +5,7 @@ const ClubSection = () => {
 const clubs = [{id: "1",
 link:"https://sedscusat.org/",
 heading:"SEDS CUSAT",
+image:'/seds-logo.png',
 color:"#e1e7f9",
 subhead:"The Space Club of Cusat",
 hidhead:"SEDS CUSAT",
@@ -12,6 +13,7 @@ details:"SEDS Cusat is a vibrant community of space enthusiasts who get together
 },{id: "2",
 link:"https://www.tinkerhub.org/",
 heading:"Tinkerhub",
+image:"/tinkerhub-logo.png",
 color:"#f1e6fe",
 subhead:"The Learning Club of Cusat",
 hidhead:"Tinkerhub",
@@ -19,13 +21,15 @@ details:"We’re a community of tinkerers, makers, policy geeks & students, and 
 },{id:"3",
 link:"https://www.iedccusat.org/",
 heading:"IEDC",
+image:"/iedc-logo.png",
 color:"#e3f7ea",
-subhead:"The Space Club of Cusat",
+subhead:"The Innovation Club of Cusat",
 hidhead:"IEDC",
 details:"IEDC CUSAT is a government-funded organization that aims to promote entrepreneurship among students and young professionals in India.",
 },{id:"4",
 link:"https://sedscusat.org/",
 heading:"SEDS CUSAT",
+image:"",
 color:"#ffe6e6",
 subhead:"The Space Club of Cusat",
 hidhead:"SEDS CUSAT",
@@ -33,6 +37,7 @@ details:"SEDS Cusat is a vibrant community of space enthusiasts who get together
 },{id: "5",
 link:"https://www.tinkerhub.org/",
 heading:"Tinkerhub",
+image:"",
 color:"#e1e7f9",
 subhead:"The Learning Club of Cusat",
 hidhead:"Tinkerhub",
@@ -41,6 +46,7 @@ details:"We’re a community of tinkerers, makers, policy geeks & students, and 
   id:"6",
 link:"https://www.iedccusat.org/",
 heading:"IEDC",
+image:"",
 color:"#e1e7f9",
 subhead:"The Space Club of Cusat",
 hidhead:"IEDC",
@@ -63,6 +69,7 @@ details:"IEDC CUSAT is a government-funded organization that aims to promote ent
               <ClubCard
                 key={club.id}
                 heading={club.heading}
+                image={club.image}
                 link={club.link}
                 subhead={club.subhead}
                 hidhead={club.hidhead}
