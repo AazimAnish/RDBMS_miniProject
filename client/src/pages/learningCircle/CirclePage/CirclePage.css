@@ -47,3 +47,9 @@
     cursor: pointer;
   }
   
+  .circle-name {
+    margin-top: -1rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Noto Sans", sans-serif;
+  }
