@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Button from "@mui/material/Button";
 import "./CirclePage.css";
+import Navbar from '../../../Components/Navbar/Navbar';
+import Footer from '../../../components/footer/footer';
+import eachCircle from "../../../assets/eachCircle.png";
 
 const CircleDetails = () => {
   const [circleName, setCircleName] = useState('My Circle');
@@ -36,23 +40,36 @@ const CircleDetails = () => {
   };
 
   return (
-    <div className="circle-details">
+    <div className='container'>
+      <div className='navbar-cont'>
+        <Navbar/>
+      </div>
+    <div className="main_container">
+    <img src={eachCircle} alt="" className= 'mimage' />
+      <div className='circle_div'>
       <h1 className="circle-name">{circleName}</h1>
+      <div className='details-text'>
       <p className="meeting-time">Meeting Time: {meetingTime}</p>
       <p className="meeting-place">Meeting Place: {meetingPlace}</p>
       <p className="mode-of-meet">Mode of Meet: {modeOfMeet}</p>
+      </div>
+      </div>
 
-      <h2 className="members">Members</h2>
+      <div className='members-space'>
+      <h2 className="headings">Members</h2>
       <ul className="member-list">
         {members.map((member) => (
           <li key={member}>{member}</li>
         ))}
       </ul>
+      </div>
 
-      <h2 className="attendance">Attendance</h2>
+      <div className='attendence-container'>
+      <h2 className="headings">Attendance</h2>
       <p className="date">Date: {selectedDate}</p>
 
-      <h3 className="mark-attendance">Mark Attendance</h3>
+      {/* <h3 className="mark-attendance">Mark Attendance</h3> */}
+      <div className='members-group'>
       <ul className="attendance-list">
         {members.map((member) => (
           <li key={member}>
@@ -67,8 +84,19 @@ const CircleDetails = () => {
           </li>
         ))}
       </ul>
+      </div>
+      </div>
 
-      <button className="submit" onClick={handleSubmit}>Submit</button>
+      <Button className="submit-button"
+              sx={{ minWidth: 300, maxWidth: 300, margin: 1.5, marginLeft: 0 }}
+              variant="contained"
+            >
+              Submit
+            </Button>
+    </div>
+    <div className='footer-cont'>
+      <Footer/>
+    </div>
     </div>
   );
 };
