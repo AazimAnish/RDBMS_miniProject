@@ -74,7 +74,7 @@
 }
 
 .img-fluid{
-  width: auto;
+  width: 100%;
   height: auto;
   background: none;
   align-self: center;
