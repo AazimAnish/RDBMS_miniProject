@@ -1,3 +1,6 @@
+!(Project Banner)[https://github.com/AazimAnish/RDBMS_miniProject/blob/main/client/public/gitreadme.png]
+
+
 # College Website Project
 
 This is a college website project that aims to provide various features for students and faculty members.
