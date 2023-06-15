@@ -1,4 +1,4 @@
-!(Project Banner)[https://github.com/AazimAnish/RDBMS_miniProject/blob/main/client/public/gitreadme.png]
+![Project Banner](https://github.com/AazimAnish/RDBMS_miniProject/blob/main/client/public/gitreadme.png)
 
 
 # College Website Project
