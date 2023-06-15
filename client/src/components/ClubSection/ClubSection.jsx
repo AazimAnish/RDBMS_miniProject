@@ -1,11 +1,14 @@
 import ClubCard from "../ClubCard/ClubCard";
 import "./ClubSection.css";
+import sedsLogo from '../../assets/images/seds-logo.png'
+import tinkerhubLogo from '../../assets/images/tinkerhub-logo.png'
+import iedcLogo from '../../assets/images/iedc-logo.png'
 const ClubSection = () => {
 
 const clubs = [{id: "1",
 link:"https://sedscusat.org/",
 heading:"SEDS CUSAT",
-image:'/seds-logo.png',
+image:sedsLogo,
 color:"#e1e7f9",
 subhead:"The Space Club of Cusat",
 hidhead:"SEDS CUSAT",
@@ -13,7 +16,7 @@ details:"SEDS Cusat is a vibrant community of space enthusiasts who get together
 },{id: "2",
 link:"https://www.tinkerhub.org/",
 heading:"Tinkerhub",
-image:"/tinkerhub-logo.png",
+image:tinkerhubLogo,
 color:"#f1e6fe",
 subhead:"The Learning Club of Cusat",
 hidhead:"Tinkerhub",
@@ -21,7 +24,7 @@ details:"We’re a community of tinkerers, makers, policy geeks & students, and 
 },{id:"3",
 link:"https://www.iedccusat.org/",
 heading:"IEDC",
-image:"/iedc-logo.png",
+image: iedcLogo,
 color:"#e3f7ea",
 subhead:"The Innovation Club of Cusat",
 hidhead:"IEDC",
