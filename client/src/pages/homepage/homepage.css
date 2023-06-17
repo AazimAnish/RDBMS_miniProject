@@ -254,7 +254,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  text-align: left;
   font-size: var(--font-size-13xl);
 }
 .divcontainer {
