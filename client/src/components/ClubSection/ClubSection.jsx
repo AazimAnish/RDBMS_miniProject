@@ -4,6 +4,7 @@ import sedsLogo from '../../assets/images/seds-logo.png'
 import tinkerhubLogo from '../../assets/images/tinkerhub-logo.png'
 import iedcLogo from '../../assets/images/iedc-logo.png'
 import igbcLogo from '../../assets/images/igbc-logo.png'
+import ieeeLogo from '../../assets/images/ieee-logo.png'
 const ClubSection = () => {
 
 const clubs = [{id: "1",
@@ -40,12 +41,12 @@ hidhead:"IGBC CUSAT",
 details:"IGBC( Indian Green Building Council) is a non profit organization which strives to bring about best energy and environment practices. IGBC CUSAT Student Chapter is an initiative towards the same.",
 },{id: "5",
 link:"https://www.tinkerhub.org/",
-heading:"IIC CUSAT",
-image:"",
+heading:"IEEE CUSAT",
+image:ieeeLogo,
 color:"#e1e7f9",
-subhead:"The Learning Club of Cusat",
-hidhead:"Tinkerhub",
-details:"We’re a community of tinkerers, makers, policy geeks & students, and are working towards mapping and empowering people who share a passion to innovate.",
+subhead:"Institute of Electrical and Electronics Engineers",
+hidhead:"IEEE",
+details:"The IEEE Student Branch provides opportunities to meet and learn from fellow IEEE Student and Graduate Student Members and engage with professional IEEE members locally. Offering programs, activities, and professional networking opportunities that build critical skills outside of the classroom.",
 },{
   id:"6",
 link:"https://www.iedccusat.org/",
