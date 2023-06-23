@@ -20,7 +20,7 @@ const SignInContainer = () => {
     <div className="email-container">
       <h1 className="jump-sait">Jump Into SAIT</h1>
       <div className="sign_in-frm">
-        <form action="http://localhost/RDBMS_MINIPROJECT/server/login.php" method="post">
+        <form action="http://localhost/RDBMS_MINIPROJECT/server/signup.php" method="post">
           <p className="input-heading">
             <label htmlFor="user">Username:</label>
             <input type="text" id="user" name="user" />
