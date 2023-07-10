@@ -23,12 +23,12 @@ const Homepage = () => {
               <div className="divw-full">
                 <div className="h2mx-auto">
                   <b className="lets-learn-together-container">
-                    <p className="lets-learn">Let’s Learn</p>
-                    <p className="lets-learn">Together</p>
+                    <p className="lets-learn">Website of</p>
+                    <p className="lets-learn">SAIT</p>
                   </b>
                 </div>
                 <div className="p">
-                  <div className="lorem-ipsum">lorem ipsum</div>
+                  <div className="lorem-ipsum">Students Association of IT</div>
                 </div>
               </div>
               
