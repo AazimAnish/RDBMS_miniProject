@@ -74,8 +74,10 @@
 }
 
 .img-fluid{
-  width: 100%;
+  width: auto;
   height: auto;
   background: none;
-  align-self: center;
+  max-width: 280px;
+  min-width: 220px;
+  max-height: 230px;
 }
