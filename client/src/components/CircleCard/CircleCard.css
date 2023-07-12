@@ -9,7 +9,11 @@
     position: relative;
     width: 25%;
   }
-  
+
+  .card-img{
+    width: 100px;
+  }
+
   .card-container .card a {
     padding: 30px;
     width: 250px;
@@ -21,6 +25,7 @@
     display: block;
     transition: 0.25s ease;
     border-radius: 50%;
+    text-align: center;
   }
   
   .card-container .card a:hover {
@@ -42,7 +47,7 @@
   }
   
   .card-container .card a .card--display h2 {
-    margin: 20px 0 0;
+    margin: 20px;
     overflow: hidden; /* Add this line to hide overflowing text */
     text-overflow: ellipsis; /* Add this line to display ellipsis (...) for overflowing text */
     white-space: nowrap; /* Add this line to prevent line breaks */
