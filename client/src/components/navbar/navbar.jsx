@@ -12,6 +12,15 @@ const Navbar = () => {
     navigate("/login");
   }, [navigate]);
 
+  const onLearnContainerClick = useCallback(() => {
+    navigate("/home-circle");
+  }, [navigate]);
+
+  const onClubContainerClick = useCallback(() => {
+    navigate("/club");
+  }, [navigate]);
+
+
   const onGetStartedContainerClick = useCallback(() => {
     navigate("/signup-mail");
   }, [navigate]);
@@ -27,10 +36,10 @@ const Navbar = () => {
             <div className="resource" onClick={onResourceContainerClick}>
               <div className="resources2">Resources</div>
             </div>
-            <div className="learn">
+            <div className="learn" onClick={onLearnContainerClick}>
               <div className="resources2">Learn</div>
             </div>
-            <div className="clubs">
+            <div className="clubs" onClick={onClubContainerClick}>
               <div className="resources2">Clubs</div>
             </div>
           </div>

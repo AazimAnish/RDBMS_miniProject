@@ -1,16 +1,17 @@
+/* eslint-disable react/prop-types */
 import "./CircleCard.css"
 
-const ClubCard = () => {
+const ClubCard = ({head,hidhead,circleName}) => {
     return (
     <div className="card-container">
       <div className="card">
         <a href="hottub">
           <div className="card--display">
-            <h2>Javascript</h2>
+          <h2>{head}</h2>
           </div>
           <div className="card--hover">
-            <h2>Javascript</h2>
-            <p>Join the Javascript learning circle</p>
+          <h2>{hidhead}</h2>
+            <p>Join the {circleName} learning clan</p>
             <p className="link">Click to Join</p>
           </div>
           </a>

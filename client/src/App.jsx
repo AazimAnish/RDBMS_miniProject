@@ -9,9 +9,11 @@ import Resources from "./pages/Resources/Resources";
 import SignUpMail from "./pages/SignUpMail/SignUpMail";
 import Login from "./pages/login/login";
 import { useEffect } from "react";
-import CreateCircle from "./pages/learningCircle/createCircle/createCircle";
-import JoinCircle from "./pages/learningCircle/joinCircle/JoinCircle";
 import HomeCircle from "./pages/learningCircle/HomeCircle/HomeCircle";
+import CreateCircle from "./pages/learningCircle/CreateCircle/CreateCircle";
+import JoinCircle from "./pages/learningCircle/JoinCircle/JoinCircle";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import CirclePage from "./pages/learningCircle/CirclePage/CirclePage";
 
 
 
@@ -64,6 +66,14 @@ function App() {
           title = "";
           metaDescription = "";
           break;
+      case "/circle-details":
+            title = "";
+            metaDescription = "";
+            break;
+      case "/profile-page":
+          title = "";
+          metaDescription="";
+          break;
     }
 
     if (title) {
@@ -90,8 +100,8 @@ function App() {
       <Route path="/create-circle" element={<CreateCircle />} />
       <Route path="/join-circle" element={<JoinCircle />} />
       <Route path="/home-circle" element={<HomeCircle />} />
-    
-
+      <Route path="/profile-page" element={<ProfilePage />} />
+      <Route path="/circle-details" element={<CirclePage />} />
     </Routes>
     
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import './JoinCircle.css';
 import Navbar from "../../../Components/Navbar/Navbar";
-import learncircle from '../../../../public/learningcircles.jpg'
+import join from '../../../assets/join.png'
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
 // import InputLabel from "@mui/material/InputLabel";
@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Footer from "../../../components/footer/footer";
 
 
-const CreateCircle = () => {
+const JoinCircle = () => {
   return (
     <div className="container">
       <div className="navbar">
@@ -21,7 +21,7 @@ const CreateCircle = () => {
 
       <div className= 'main_container'>
         <div className= 'first_view_container'>
-          <img src={learncircle} alt="" className= 'mimage' />
+          <img src={join} alt="" className= 'mimage' />
           <div className= 'fsview'>
             <p className= 'fsheading'>
               Let's Join <br /> <span>Learning Circles</span>
@@ -50,7 +50,7 @@ const CreateCircle = () => {
                 Type in your circle name to verify it to join a learning circle
                 </p>
               </div>
-              <div className='ff_form_fields'>
+              <div className='ff_form_fields_join'>
                 <TextField
                   sx={{
                     minWidth: 300,
@@ -240,4 +240,4 @@ const CreateCircle = () => {
   );
 };
 
-export default CreateCircle;
+export default JoinCircle;

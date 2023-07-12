@@ -1,11 +1,11 @@
 //import { useCallback } from "react";
-import Navbar from "../../components/navbar/navbar";
 //import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/footer";
 import SecondSection from "../../components/secondSection/SecondSection";
 import ClubSection from "../../components/ClubSection/ClubSection";
 import CircleSection from "../../components/CircleSection/CircleSection"
 import "./homepage.css";
+import Navbar from "../../Components/Navbar/Navbar";
 const Homepage = () => {
   // const navigate = useNavigate();
 
@@ -23,12 +23,12 @@ const Homepage = () => {
               <div className="divw-full">
                 <div className="h2mx-auto">
                   <b className="lets-learn-together-container">
-                    <p className="lets-learn">Let’s Learn</p>
-                    <p className="lets-learn">Together</p>
+                    <p className="lets-learn">Website of</p>
+                    <p className="lets-learn">SAIT</p>
                   </b>
                 </div>
                 <div className="p">
-                  <div className="lorem-ipsum">lorem ipsum</div>
+                  <div className="lorem-ipsum">Students Association of IT</div>
                 </div>
               </div>
               

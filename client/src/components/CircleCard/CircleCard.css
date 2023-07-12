@@ -12,8 +12,8 @@
   
   .card-container .card a {
     padding: 30px;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border: 2px solid black;
     background: white;
     text-decoration: none;
@@ -37,7 +37,7 @@
   }
   
   .card-container .card a .card--display i {
-    font-size: 30px;
+    font-size: 10px;
     margin-top: 120px;
   }
   

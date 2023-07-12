@@ -1,6 +1,5 @@
 .svg-icon {
   position: absolute;
-  height: calc(100% - 239.31px);
   width: calc(100% - 408.81px);
   top: 35px;
   right: 40px;
@@ -46,7 +45,7 @@
   top: 0;
   left: 0;
   border-radius: var(--br-5xs);
-  background-color: var(--color-whitesmoke-100);
+  background-color: #e3f7ea;
   width: 36.5rem;
   height: 23.75rem;
   overflow: hidden;
@@ -82,17 +81,15 @@
   top: 0;
   left: 616px;
   border-radius: var(--br-5xs);
-  background-color: var(--color-whitesmoke-100);
+  background-color: #f1e6fe;
   width: 36.5rem;
   height: 23.75rem;
 }
 .svg-icon2 {
-  height: calc(100% - 70px);
-  width: calc(100% - 607px);
+ 
   top: 60.39px;
   right: 0;
   bottom: 9.61px;
-  left: 607px;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
@@ -124,7 +121,7 @@
   top: 404px;
   left: 0;
   border-radius: var(--br-5xs);
-  background-color: var(--color-whitesmoke-100);
+  background-color: #e1e7f9;
   width: 75rem;
   height: 18.88rem;
   overflow: hidden;

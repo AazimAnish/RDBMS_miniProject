@@ -1,44 +1,578 @@
-.mainlearnlearn {
-    width: 50%;
-    height: 60%;
-    left: 77px;
-    top: 200px;
-    position: absolute;
+p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* First Section Styles From V2.O */
+  .first_section {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 300px;
+    position: relative;
+    bottom: 550px;
+  }
+  
+  .fsheading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #404040;
+    font-family: "Noto Sans", sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  .fsheading span {
+    color: #f78c40;
+  }
+  
+  .s_images {
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+  }
+  
+  .fssheading {
+    font-size: 1.25rem;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    color: #404040;
+  }
+  
+  .fstagline {
+    margin: 1rem 0;
+  }
+  
+  .buttons {
+    margin-top: 1rem;
+  }
+  
+  .fsbtn,
+  .fsobtn {
+    background: #0b67e8;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    margin: 0.5rem;
+    border: none;
+    font-weight: 500;
+    margin-top: 1vh;
+    border-radius: 5px;
+  }
+  
+  .fsobtn {
+    color: #0b67e8;
+    border: solid;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #0b67e8;
+    margin-left: 0.5rem;
+    background-color: white;
+  }
+  
+  .fs_img {
+    display: none;
+  }
+  
+  .supporters {
+    margin-bottom: 2vh;
+  }
+  
+  .supporters span {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-right: 1rem;
+  }
+  
+  .supporter {
+    width: 4rem;
+    margin-right: 1rem;
+    border-radius: 50px;
+    box-shadow: 0 1px 12px 0 rgba(193, 195, 211, 0.37);
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .fsobtn {
+      margin-left: 0.5rem;
+    }
+  
+    .supporters {
+      display: flex;
+      align-items: center;
+    }
+  
+    .s_images {
+      display: flex;
+    }
+  
+    .fs_img {
+      display: block;
+      width: 28vw;
+      margin-left: 10vw;
+    }
+    main {
+      margin-top: 18vh;
+    }
+    .first_section {
+      margin: 6rem;
+    }
+  
+    .fstexts {
+      width: 48vw;
+      padding-right: 3vw;
+      color: #404040;
+    }
+  
+    .fsheading {
+      font-size: 4.1rem;
+    }
+  }
+  /* First Section Sytles End */
+  
+  /* Second Section Styles */
+  
+  .secondsection {
+    margin: 2rem;
+  }
+  
+  .fssheading1 {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .fssheading1 span {
+    color: #f78c40;
+  }
+  
+  .form {
+    display: flex;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 2rem;
+  }
+  
+  @media only screen and (min-width: 768px) {
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .secondsection {
+      margin: 1.5rem 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .fssheading1 {
+      font-size: 4rem;
+      line-height: 4rem;
+      width: 60vw;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    .fsstagline {
+      width: 75%;
+      font-size: 1;
+      text-align: center;
+    }
+  }
+  
+  .createbtn {
+    background-color: #f78c40;
+    text-align: center;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  
+  .createbtnalign {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .notfound {
+    text-align: center;
+    color: #f6842c;
+  }
+  
+  .notfound span {
+    font-weight: 500;
+  }
+  
+  .backenderror {
+    margin: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.containerlearn {
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  
+  .errorheading {
+    color: #f78c40;
+    margin-top: -1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Noto Sans", sans-serif;
+  }
+  
+  .errortext {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .fsstagline {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    .errorheading {
+      margin-top: -1rem;
+      font-size: 2.25rem;
+    }
+  
+    .fssheading1 {
+      width: 50vw;
+    }
+  
+    .fsstagline {
+      width: 65%;
+    }
+  
+    .errortext {
+      width: 50vw;
+      font-size: 1rem;
+      display: block;
+      margin: auto;
+    }
+  }
+  
+  /* Circles Styles */
+  
+  .circles_card {
     position: relative;
-    height: 100vh;
-    width: 100vw;
-}
-
-.textlearn {
-    font-size: 70px;
-    margin: 15px 0px;
-} 
-
-.jcb {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #4CAF50;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 1px 12px 0 rgba(193, 195, 211, 0.37);
+    /* backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); */
+    border-radius: 10px;
+  
+    border-radius: 10px;
+    max-width: 22rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    font-family: "Poppins", sans-serif;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .circle_name {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #f6842c;
+  }
+  
+  .join_circle {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #f78c40;
     color: #fff;
-    font-size: 16px;
+    padding: 0.6rem 1.5rem;
+    border-radius: 5px;
+    margin-right: 0.75rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .view_members {
+    font-family: "Noto Sans", sans-serif;
+    margin-bottom: 0.25rem;
+    border: 2px solid #f78c40;
+    padding: 0.5rem 1.25rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .no_circle {
+    margin: 0 2rem;
+  }
+  
+  .circles {
+    margin: 1rem 2rem;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .circles {
+      margin: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .circles_container {
+      display: block;
+      margin: auto;
+    }
+  
+    /* .circles {
+      margin: 2rem 6rem;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin-top: 0;
+    } */
+  }
+  
+  @media only screen and (min-width: 1100px) {
+    .circles_container {
+      display: block;
+      margin: auto;
+    }
+    /* 
+    .circles {
+      margin: 2rem 6rem;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+    } */
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    /* .circles {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      row-gap: 3rem;
+      grid-template-columns: 32% 32% 32%;
+    } */
+  }
+  
+  @media only screen and (min-width: 1600px) {
+    /* .circles {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      row-gap: 3rem;
+      grid-template-columns: 23% 23% 23% 23%;
+    } */
+  
+    .fssheading1 {
+      width: 40vw;
+    }
+  
+    .fsstagline {
+      width: 50%;
+    }
+  }
+  
+  /* Third Section Styles */
+  .thirdsection {
+    margin: 2rem 2rem 1rem;
+  }
+  
+  .tssheading1 {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tssheading1 span {
+    color: #f78c40;
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .thirdsection {
+      margin: 2rem 6rem;
+    }
+    .tssheading1 {
+      font-size: 3rem;
+      line-height: 4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    .tsstagline {
+      width: 75%;
+    }
+  
+    .tsstagline {
+      width: 40vw;
+      padding-right: 3vw;
+      color: #404040;
+    }
+  }
+  
+  .modaltext {
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 0px 12px;
+    color: #f78c40;
+    font-weight: 600;
+    font-family: "Noto Sans", sans-serif;
+  }
+  .body_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+  }
+  
+  .errortext {
+    text-align: center;
+  }
+  
+  /* Cards Styling */
+  
+  .cards_container {
+    margin-top: 2rem;
+    display: grid;
+    -webkit-line-clamp: 3;
+    row-gap: 3vh;
+    column-gap: 3vw;
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .cards_container {
+      margin-top: 6vh;
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+      row-gap: 3vh;
+      column-gap: 3vw;
+    }
+  }
+  
+  /* Interest Group Card Style for Request Card */
+  .icard {
+    position: relative;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 1px 12px 0 rgba(193, 195, 211, 0.37);
+    /* backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); */
+    border-radius: 10px;
+    border: 2px solid #f59b56;
+    border-radius: 10px;
+  }
+  
+  .icardheading {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+  }
+  
+  .icardbtn {
+    background-color: #fff;
+    margin-top: 1vh;
+    padding: 0.5rem 1.85rem;
+    font-size: 0.95rem;
+    color: #f59b56;
+    border: 2px solid #f59b56;
+    border-radius: 5px;
+  }
+  
+  .icardbtn:hover {
+    background-color: #f59b56;
+    color: #ffff;
+    border: 2px solid #f59b56;
+    transition: 1s ease-in-out;
+  }
+  
+  .icardcontent {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .icarddesign {
+    display: none;
+  }
+  
+  @media only screen and (min-width: 1580px) {
+    .icarddesign {
+      display: block;
+      position: absolute;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: rgb(235, 235, 235);
+      padding-right: 20px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  
+  /* .cards-container {
+    display: grid;
+    row-gap: 3vh;
+    column-gap: 3vw;
+  } */
+  
+  @media only screen and (min-width: 1000px) {
+    /* .cards-container {
+      margin-top: 6vh;
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+      row-gap: 3vh;
+      column-gap: 3vw;
+    } */
+  
+    .icard {
+      padding: 2rem;
+    }
   }
 
-  .footerlearn {
-    left: 77px;
-    top: 900px;
-    position: absolute;
+  .first_view_container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .circleSection {
+    top: 900px;
+    right: 415px;
+    position: relative;
+  }
+
+  .footerSection {
+    position: relative;
+    top: 350px;
+  }
+  
+  .homeimg {
+    position: relative;
+    top: 30px;
+    left: 30px;
+  }
+
+  .mimagehome {
+    max-width: 25rem;
+    display: block;
+    margin: auto;
+    top: 230px;
+    position: relative;
+    left: 300px;
+  }

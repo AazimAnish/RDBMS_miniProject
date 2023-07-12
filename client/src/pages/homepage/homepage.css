@@ -102,7 +102,6 @@
 .divrelative-icon {
   position: relative;
   width: 32.06rem;
-  height: 36.86rem;
   object-fit: cover;
 }
 .divflex,
@@ -135,25 +134,8 @@
 .second-section {
   height: 49.75rem;
 }
-.clubs-of-soe {
-  position: relative;
-  line-height: 57.5px;
-  width: 43.89rem;
-  height: 6.78rem;
-  flex-shrink: 0;
-}
-.clubs-of-soe,
-.design-a-financial,
-.h2mx-auto1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.h2mx-auto1 {
-  width: 45.13rem;
-  height: 7.19rem;
-  flex-direction: column;
-}
+
+
 .design-a-financial {
   position: relative;
   font-size: var(--font-size-xl);
@@ -272,7 +254,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  text-align: left;
   font-size: var(--font-size-13xl);
 }
 .divcontainer {
@@ -289,42 +270,14 @@
   align-items: center;
   flex-shrink: 0;
 }
-.club-section {
-  background-color: var(--color-white);
-  width: 120rem;
-  height: 106.06rem;
-  overflow: hidden;
-  flex-direction: column;
-  padding: 5.63rem 0;
-  box-sizing: border-box;
-  justify-content: flex-start;
-}
-.join-a-circle {
-  position: relative;
-  line-height: 57.5px;
-  justify-content: center;
-  width: 43.19rem;
-  height: 3.19rem;
-}
+
 .circle-group-icon {
   position: relative;
   width: 100.94rem;
   height: 58.88rem;
 }
-.circle-section {
-  background-color: var(--color-whitesmoke-100);
-  width: 120rem;
-  height: 90rem;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  padding: var(--padding-120xl) 9.5rem var(--padding-120xl) 9.56rem;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
-  gap: 7.81rem;
-}
+
+
 .landing-page,
 .main {
   display: flex;
@@ -333,8 +286,8 @@
 }
 .main {
   align-self: stretch;
-  height: 319rem;
-  padding: 0 0 5.93rem;
+  height: auto;
+  padding: 0 0 0;
   box-sizing: border-box;
   align-items: center;
 }
