@@ -33,10 +33,10 @@ const Navbar = () => {
         </div>
         <div className="div3">
           <div className="links">
-            <div className="resource" onClick={onResourceContainerClick}>
+            <div className="clubs" onClick={onResourceContainerClick}>
               <div className="resources2">Resources</div>
             </div>
-            <div className="learn" onClick={onLearnContainerClick}>
+            <div className="clubs" onClick={onLearnContainerClick}>
               <div className="resources2">Learn</div>
             </div>
             <div className="clubs" onClick={onClubContainerClick}>
@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
         <div className="div4">
           <div className="login1" onClick={onLoginContainerClick}>
-            <div className="login2">Login</div>
+            <div className="login2, clubs">Login</div>
           </div>
           <div className="get-started" onClick={onGetStartedContainerClick}>
             <div className="nav-divw-full2">
