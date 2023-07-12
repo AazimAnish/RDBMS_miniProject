@@ -41,7 +41,7 @@ const Navbar = () => {
               <div className="resources2">Learn</div>
             </div>
             <div className="clubs" onClick={onClubContainerClick}>
-              <div className="resources2">Clubs</div>
+                <div className="resources2">Clubs</div>
             </div>
           </div>
         </div>

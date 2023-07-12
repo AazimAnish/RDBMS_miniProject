@@ -1,14 +1,15 @@
 
 
-.main_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 7% 0%;
-    max-width: 1300px;
-    margin: auto;
-    position: relative;
-  }
+.main_container_join {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 4%;
+  padding-bottom: 7%;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
   
   /* .first_view_container,
   .form_container {
@@ -55,7 +56,6 @@
     border-radius: 3px;
     color: rgb(255, 255, 255);
     background-color: #6fd556;
-    font-family: "Noto Sans";
   }
   
   .fsheading {
@@ -128,5 +128,6 @@
   .joincirclebutton {
     position: relative;
     top: 75px;
+    font-family: "Poppins";
   }
   

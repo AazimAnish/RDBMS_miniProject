@@ -1,6 +1,5 @@
 import React from "react";
 import './JoinCircle.css';
-import Navbar from "../../../Components/Navbar/Navbar";
 import join from '../../../assets/join.png'
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
@@ -9,6 +8,7 @@ import join from '../../../assets/join.png'
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Footer from "../../../components/footer/footer";
+import Navbar from "../../../components/navbar/navbar";
 
 
 const JoinCircle = () => {
@@ -19,7 +19,7 @@ const JoinCircle = () => {
       </div>
 
 
-      <div className= 'main_container'>
+      <div className= 'main_container_join'>
         <div className= 'first_view_container'>
           <img src={join} alt="" className= 'mimage' />
           <div className= 'fsview'>

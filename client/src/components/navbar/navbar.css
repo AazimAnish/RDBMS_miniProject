@@ -41,6 +41,7 @@
   padding: var(--padding-3xs);
   align-items: flex-start;
   position: relative;
+  cursor: pointer;
 }
 .links {
   display: flex;

@@ -42,7 +42,7 @@ const SignInContainer = () => {
       <div className="sign_in-frm">
         <form /*action="http://localhost/RDBMS_MINIPROJECT/server/signup.php" method="post"*/>
           <p className="input-heading">
-            <label htmlFor="user">Username:</label>
+            <label className="signlabel" htmlFor="user">Username:</label>
             <input
               type="text"
               id="user"
@@ -52,7 +52,7 @@ const SignInContainer = () => {
             />
           </p>
           <p className="input-heading">
-            <label htmlFor="user">Email:</label>
+            <label className="signlabel" htmlFor="user">Email:</label>
             <input
               type="email"
               id="email"
@@ -66,7 +66,7 @@ const SignInContainer = () => {
             <input type="number" id="user" name="user" min="10000000" max="99999999"/>
           </p> */}
           <p className="input-heading">
-            <label htmlFor="user">Phone Number</label>
+            <label className="signlabel" htmlFor="user">Phone Number</label>
             <input
               type="tel"
               id="phoneNumber"
@@ -78,7 +78,7 @@ const SignInContainer = () => {
           </p>
           
           <p className="input-heading">
-            <label htmlFor="pass">Password:</label>
+            <label className="signlabel" htmlFor="pass">Password:</label>
             <input
               type="password"
               id="pass"

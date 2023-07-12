@@ -6,6 +6,8 @@ import ClubSection from "../../components/ClubSection/ClubSection";
 import CircleSection from "../../components/CircleSection/CircleSection"
 import "./homepage.css";
 import Navbar from "../../components/navbar/navbar";
+
+
 const Homepage = () => {
   // const navigate = useNavigate();
 
