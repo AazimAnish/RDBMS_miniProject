@@ -71,9 +71,9 @@ color: #666666;
 
 }
 
- #user,#pass {
+ #user,#pass,#phoneno,#email {
   box-sizing: border-box;
-
+margin-top: 12px;
 width: 528px;
 height: 56px;
 
@@ -84,7 +84,7 @@ border-radius: 12px;
 #btn {
   width: 528px;
 height: 64px;
-
+margin-top: 12px;
 background: black;
 opacity: 0.25;
 border-radius: 32px;

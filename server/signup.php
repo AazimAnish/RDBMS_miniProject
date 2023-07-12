@@ -14,14 +14,17 @@ if (!$conn) {
 }
 
 // Get the user data from the form
-$username = $_POST['username'];
-$password = $_POST['password'];
+$user = $_POST['user'];
+$email = $_POST['email'];
+$regno = $_POST['regno'];
+$phoneno = $_POST['phoneno'];
+$pass = $_POST['pass'];
 
 // Save the user data to the database
-$sql = "INSERT INTO user_info(username, password) VALUES ('$username', '$password')";
+$sql = "INSERT INTO user_info(username,password,email,phoneno,regno) VALUES ('$user','$pass','$email','$phoneno','$regno')";
 
 if (mysqli_query($conn, $sql)) {
-    header("Location: loginback.php");
+    header("Location: http://localhost:5173/");
     exit();
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);

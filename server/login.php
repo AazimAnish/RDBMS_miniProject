@@ -6,7 +6,8 @@
 $result = $mysqli->query("select * from user_info where username = '$username' and password = '$password'");
 $row = $result->fetch_assoc();
  if(isset($row['username']) == $username && isset( $row['password']) == $password){
-    echo "login success";
+   header("Location: http://localhost:5173/");
+   exit();    
  } else{
     echo "failed to login";
  }
