@@ -16,12 +16,11 @@ if (!$conn) {
 // Get the user data from the form
 $user = $_POST['user'];
 $email = $_POST['email'];
-$regno = $_POST['regno'];
 $phoneno = $_POST['phoneno'];
 $pass = $_POST['pass'];
 
 // Save the user data to the database
-$sql = "INSERT INTO user_info(username,password,email,phoneno,regno) VALUES ('$user','$pass','$email','$phoneno','$regno')";
+$sql = "INSERT INTO user_info(username,password,email,phoneno) VALUES ('$user','$pass','$email','$phoneno')";
 
 if (mysqli_query($conn, $sql)) {
     header("Location: http://localhost:5173/");
