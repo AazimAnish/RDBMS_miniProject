@@ -1,17 +1,19 @@
 
 <?php
 // Create a connection to the database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "login_db";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "miniproject";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+// $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// Check if the connection was successful
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+// // Check if the connection was successful
+// if (!$conn) {
+//   die("Connection failed: " . mysqli_connect_error());
+// }
+include 'db_connection.php';
+session_start();
 
 // Get the user data from the form
 $lead_name = $_POST['lead_name'];
