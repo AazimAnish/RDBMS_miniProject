@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "login_db";
+$dbname = "miniproject";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -20,7 +20,7 @@ $phoneno = $_POST['phoneno'];
 $pass = $_POST['pass'];
 
 // Save the user data to the database
-$sql = "INSERT INTO user_info(username,password,email,phoneno) VALUES ('$user','$pass','$email','$phoneno')";
+$sql = "INSERT INTO users(username,password,email,phone_no) VALUES ('$user','$pass','$email','$phoneno')";
 
 if (mysqli_query($conn, $sql)) {
     header("Location: http://localhost:5173/");
