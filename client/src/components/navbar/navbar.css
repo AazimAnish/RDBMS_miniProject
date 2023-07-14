@@ -29,9 +29,7 @@
   justify-content: flex-start;
   cursor: pointer;
 }
-.learn {
-  width: 3.92rem;
-}
+
 .clubs,
 .learn,
 .links {
@@ -42,12 +40,17 @@
 .clubs {
   padding: var(--padding-3xs);
   align-items: flex-start;
+  position: relative;
+  cursor: pointer;
 }
 .links {
-  width: 25.68rem;
-  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--gap-3xl);
+  padding-left: 0; /* Remove the default left padding */
+  width: fit-content; /* Wrap to the content width */
 }
 .div3 {
   width: 66.99rem;
@@ -55,21 +58,22 @@
   flex-direction: column;
   padding: 0 var(--padding-181xl);
   box-sizing: border-box;
-  align-items: flex-start;
-  justify-content: center;
 }
 .login2 {
   position: relative;
   line-height: 21.25px;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .login1 {
   position: absolute;
   top: 7px;
   left: -10px;
   display: flex;
   flex-direction: row;
-  padding: var(--padding-3xs);
   align-items: flex-start;
   justify-content: flex-start;
   cursor: pointer;
@@ -94,19 +98,14 @@
 }
 .get-started {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 66.6px;
   border-radius: var(--br-5xs);
   cursor: pointer;
   text-align: center;
   color: var(--color-white);
 }
-.div4 {
-  position: relative;
-  width: 14.01rem;
-  height: 4.38rem;
-  font-size: var(--font-size-mid);
-}
+
 .navbar,
 .navbar-container {
   box-sizing: border-box;
@@ -131,4 +130,27 @@
   font-size: var(--font-size-base);
   color: var(--color-gray-300);
   font-family: var(--font-roboto);
+}
+.div4 {
+  position: relative;
+  width: 14.01rem;
+  height: 4.38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 7px;
+}
+
+.div4 > * {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.login1,
+.nav-divw-full2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

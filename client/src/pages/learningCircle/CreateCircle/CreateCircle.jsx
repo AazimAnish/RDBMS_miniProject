@@ -1,6 +1,5 @@
 import React from "react";
 import './CreateCircle.css';
-import Navbar from "../../../Components/Navbar/Navbar";
 import create from '../../../assets/create.png'
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
@@ -9,6 +8,7 @@ import create from '../../../assets/create.png'
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Footer from "../../../components/footer/footer";
+import Navbar from "../../../components/navbar/navbar";
 
 
 const CreateCircle = () => {
@@ -19,9 +19,9 @@ const CreateCircle = () => {
       </div>
 
 
-      <div className= 'main_container'>
+      <div className= 'main_container_circle'>
         <div className= 'first_view_container'>
-          <img src={create} alt="" className= 'mimage' />
+          <img src={create} alt="" className= 'mimage_create' />
           <div className= 'fsview'>
             <p className= 'fsheading'>
               Let's Form <br /> <span>Learning Circles</span>
@@ -214,7 +214,7 @@ const CreateCircle = () => {
             </div>
 
             <Button
-              sx={{ minWidth: 300, maxWidth: 300, margin: 1.5, marginLeft: 0 }}
+              sx={{ minWidth: 300, maxWidth: 300, margin: 1.5, marginLeft: 0, marginBottom: 5 }}
               // disabled={
               //   create.phone &&
               //   create.phone.length >= 10 &&

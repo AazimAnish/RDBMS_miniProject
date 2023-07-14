@@ -5,7 +5,9 @@ import SecondSection from "../../components/secondSection/SecondSection";
 import ClubSection from "../../components/ClubSection/ClubSection";
 import CircleSection from "../../components/CircleSection/CircleSection"
 import "./homepage.css";
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../components/navbar/navbar";
+
+
 const Homepage = () => {
   // const navigate = useNavigate();
 
@@ -23,12 +25,12 @@ const Homepage = () => {
               <div className="divw-full">
                 <div className="h2mx-auto">
                   <b className="lets-learn-together-container">
-                    <p className="lets-learn">Let’s Learn</p>
-                    <p className="lets-learn">Together</p>
+                    <p className="lets-learn">What is</p>
+                    <p className="lets-learn">SAIT?</p>
                   </b>
                 </div>
                 <div className="p">
-                  <div className="lorem-ipsum">lorem ipsum</div>
+                  <div className="lorem-ipsum">Students Association of IT</div>
                 </div>
               </div>
               
