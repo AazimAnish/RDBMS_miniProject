@@ -1,6 +1,7 @@
 import express from "express";
 import mysql from "mysql2";
-const authentication = express.Router();
+import cookieParser from "cookie-parser"; // Import the cookie-parser middleware
+const login = express.Router();
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -8,9 +9,10 @@ const db = mysql.createConnection({
   password: "password",
   database: "miniproject",
 });
+login.use(cookieParser());
 
 // POST request to handle login
-authentication.post("/", (req, res) => {
+login.post("/", (req, res) => {
   const { username, password } = req.body;
 
   // Fetch user data from the database
@@ -22,9 +24,15 @@ authentication.post("/", (req, res) => {
 
     if (data.length === 1) {
       // User authenticated successfully
+      // Set the user_id as a cookie
+      // Set the user_id as a cookie
+      const user_id = data[0].user_id;
+      res.cookie("user_id", user_id, { httpOnly: true });
+      console.log(req.cookies);
+
       return res.json({ success: true, user: data[0] });
     } else {
-      // User authentication failed
+      // User login failed
       return res.json({
         success: false,
         error: "Invalid username or password",
@@ -33,4 +41,4 @@ authentication.post("/", (req, res) => {
   });
 });
 
-export default authentication;
+export default login;
