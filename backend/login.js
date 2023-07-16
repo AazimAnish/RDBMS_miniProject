@@ -28,7 +28,7 @@ login.post("/", (req, res) => {
       // Set the user_id as a cookie
       const user_id = data[0].user_id;
       res.cookie("user_id", user_id, { httpOnly: true });
-      console.log(req.cookies);
+      console.log(user_id);
 
       return res.json({ success: true, user: data[0] });
     } else {

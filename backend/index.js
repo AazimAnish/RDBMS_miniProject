@@ -13,8 +13,19 @@ app.use(cookieParser());
 
 app.use(cors()); // Add CORS middleware
 app.use(express.json()); // Add JSON parsing middleware
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  next();
+});
 
 // Routes
+// app.get("/setcookie", (req, res) => {
+//   res.cookie(`Cookie token name`, `encrypted cookie string Value`);
+//   res.send("Cookie have been saved successfully");
+// });
 app.use(signup); // Mount the signup routes
 app.use("/login", login);
 app.use("/create_circle", createCircle);

@@ -26,10 +26,10 @@ const upload = multer({ storage: storage });
 // POST request to handle circle creation with file upload
 createCircle.post("/", upload.single("cover_photo"), (req, res) => {
   const { circle_name, description, max_participants } = req.body;
-  const user_id = req.cookies.user_id;
-  console.log(user_id);
+  const creator_id = req.cookies.user_id;
+  console.log(creator_id);
   // Check if user is authenticated (user_id is available in the cookie)
-  if (!user_id) {
+  if (!creator_id) {
     return res.status(401).json({ error: "User not authenticated" });
   }
 
@@ -44,7 +44,7 @@ createCircle.post("/", upload.single("cover_photo"), (req, res) => {
   db.query(
     q,
     [
-      user_id,
+      creator_id,
       circle_name,
       description,
       max_participants,
@@ -58,6 +58,7 @@ createCircle.post("/", upload.single("cover_photo"), (req, res) => {
 
       // Circle created successfully
       return res.json({
+        success: true,
         message: "Circle created successfully",
         circle_id: result.insertId,
       });
