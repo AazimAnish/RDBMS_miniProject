@@ -1,9 +1,10 @@
 .profile {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
   height: 100vh; /* Set the height of the profile div to 100% of the viewport height */
+  width: 100vw;
   justify-content: center;
 }
 
@@ -12,6 +13,7 @@
   padding: 20px;
   margin-right: 30px;
   text-align: center;
+  
 }
 
 .settings-buttons {
@@ -42,11 +44,11 @@ h2 {
   font-size: 24px;
 }
 
-.account-table,
+/* .account-table,
 .circle-table {
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .account-table td:first-child,
 .circle-table td:first-child {
