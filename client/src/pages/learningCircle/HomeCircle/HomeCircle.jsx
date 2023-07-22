@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import Footer from "../../../components/footer/footer";
 import CircleSection from "../../../components/CircleSection/CircleSection";
 import learnhomeimg from "../../../assets/learnhomeimg.png";
+import CircleCards from "../../../components/dbCircleCard/dbCircleCard";
 
 const CreateCircle = () => {
   return (
@@ -18,7 +19,9 @@ const CreateCircle = () => {
       {/* <div className= "navbar"> */}
       <Navbar />
       {/* </div> */}
-
+      <div className="dbCirclecontainer">
+        <CircleCards />
+      </div>
       <div className="first_view_container_home">
         <img src={learnhomeimg} alt="" className="mimagehome" />
         <div className="first_section">

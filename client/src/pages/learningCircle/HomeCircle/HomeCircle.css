@@ -576,3 +576,7 @@ p {
     position: relative;
     left: 300px;
   }
+
+  .dbCircleContainer{
+    width: 100%;
+  }

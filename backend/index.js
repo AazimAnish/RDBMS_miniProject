@@ -3,6 +3,13 @@ import cors from "cors";
 import signup from "./signup.js"; // Import the signu router
 import login from "./login.js";
 import createCircle from "./create_circle.js"; // Import the createCircle router
+import getCircle from "./get_circle.js";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 import cookieParser from "cookie-parser";
 const app = express();
@@ -28,7 +35,9 @@ app.use((req, res, next) => {
 // });
 app.use(signup); // Mount the signup routes
 app.use("/login", login);
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/create_circle", createCircle);
+app.use("/get_circles", getCircle);
 
 // Start the server
 app.listen(8800, () => {

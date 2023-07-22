@@ -30,6 +30,8 @@ createCircle.post("/", upload.single("cover_photo"), (req, res) => {
   console.log(creator_id);
   // Check if user is authenticated (user_id is available in the cookie)
   if (!creator_id) {
+    console.log("hi");
+
     return res.status(401).json({ error: "User not authenticated" });
   }
 
@@ -57,6 +59,7 @@ createCircle.post("/", upload.single("cover_photo"), (req, res) => {
       }
 
       // Circle created successfully
+
       return res.json({
         success: true,
         message: "Circle created successfully",
