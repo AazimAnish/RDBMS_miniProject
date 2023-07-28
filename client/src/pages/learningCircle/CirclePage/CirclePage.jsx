@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from "@mui/material/Button";
 import "./CirclePage.css";
-import Navbar from '../../../Components/Navbar/Navbar';
+import Navbar from '../../../components/navbar/navbar';
 import Footer from '../../../components/footer/footer';
 import eachCircle from "../../../assets/eachCircle.png";
 

@@ -1,89 +1,127 @@
+/* ProfilePage.css */
+
 .profile {
+  font-family: "Poppins", sans-serif;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  height: 100vh; /* Set the height of the profile div to 100% of the viewport height */
+  flex-direction: left;
   width: 100vw;
-  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .settings-box {
-  border: 1px solid #000;
-  padding: 20px;
-  margin-right: 30px;
-  text-align: center;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom:35%;
+  margin-left: 10px;
+  margin-right: 20%;
+  border: 2px solid rgb(68, 138, 224); /* Change border color to a lighter blue */
+  border-radius: 10px;
+  padding: 25px; /* Increase padding for a more spacious feel */
+  background-color: rgb(253, 253, 253); /* Add background color for contrast */
+
+}
+
+/* Increase the border size */
+.settings-box {
+  border-width: 3px;
 }
 
 .settings-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: column; /* Align buttons vertically */
   margin-top: 10px;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
 .blue-button {
-  background-color: blue;
+  background-color: rgb(14, 13, 13);
   color: white;
   border: none;
-  border-radius: 3px;
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 16px 24px;
+  margin: 25px;
+  border-radius: 5px;
+}
+
+.blue-button:hover {
+  background-color: rgb(48, 118, 194); /* Slightly darker on hover */
 }
 
 .content-box {
   display: flex;
-  flex-direction: column;
+  border: 2px solid rgb(208, 202, 202);
+  border-radius: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  margin-top: 40px;
+  border-style: solid;
+  padding: 30px; /* Increase padding to create more space inside the box */
+  width: 80%; /* Increase the width of the box */
+  background-color: white; /* Change the background color to white */
 }
 
-h2 {
-  margin-bottom: 10px;
-  font-size: 24px;
+.box {
+  padding: 30px;
+  margin: 50px;
 }
 
-/* .account-table,
+/* Buttons inside the settings box */
+.buttons-inside-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Add margin between buttons and the content below */
+}
+
+/* Buttons outside the settings box */
+.buttons-outside-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Move buttons up by 20px */
+  margin-right: 401px;
+}
+
+button {
+  background-color: rgb(100, 159, 247);
+  color: rgb(234, 239, 244);
+  padding: 10px 20px;
+  border-radius: 50px;
+  border-color: rgb(240, 240, 240);
+  margin: 15px;
+  margin-left: 20px;
+}
+
+button:hover {
+  background-color: rgb(48, 118, 194);
+}
+
+.account-table,
 .circle-table {
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-.account-table td:first-child,
-.circle-table td:first-child {
-  text-align: center;
-  padding-right: 20px;
+  width: 100%;
+  border-collapse: collapse; /* Add border-collapse for a cleaner look */
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"] {
-  width: 250px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
-  text-align: center;
+.account-table td,
+.circle-table td {
+  padding: 10px;
+  border: 1px solid rgb(252, 251, 251);
 }
 
-.buttons {
-  margin-top: 20px;
-  text-align: center;
+/* Adding the new border around the tables */
+.table-container {
+  border-radius: 10px;
+  padding: 20px; /* Increase padding for a more spacious feel */
+  background-color: white; /* Change the background color to white */
 }
 
-.buttons button {
-  margin-right: 20px;
-  padding: 8px 16px;
-  background-color: #4285f4;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
+/* Position the forgot password link */
+.forgot-password {
+  top: 20;
+  right: 570px; /* Adjust the value to position the link correctly */
+  font-size: 14px;
   cursor: pointer;
-  font-size: 16px;
-}
-
-.buttons button:hover {
-  background-color: #3367d6;
 }
