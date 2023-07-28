@@ -57,8 +57,53 @@ createCircle.post("/", upload.single("cover_photo"), (req, res) => {
       if (err) {
         return res.status(500).json({ error: err.message });
       }
+      // Fetch the circle_id of the recently created row
+      const getCircleIdQuery = "SELECT LAST_INSERT_ID() as circle_id";
+      db.query(getCircleIdQuery, (err, result) => {
+        if (err) {
+          return res.status(500).json({ error: err.message });
+        }
+        const circle_id = result[0].circle_id; // Get the circle_id from the query result
 
-      // Circle created successfully
+        console.log("hi" + circle_id);
+        // Retrieve participant_name from the users table based on the creator_id
+        const getParticipantNameQuery =
+          "SELECT participant_name FROM users WHERE user_id = ?";
+        db.query(getParticipantNameQuery, [creator_id], (err, result) => {
+          if (err) {
+            console.log("hi");
+            return res.status(500).json({ error: err.message });
+          }
+
+          const participant_name = result[0].participant_name; // Retrieve the participant_name from the query result
+          console.log("partic" + participant_name);
+
+          // Now, add the user to "circleparticipants" table
+          const userParticipantQuery =
+            "INSERT INTO circleparticipants (user_id, circle_id, participant_name, role) VALUES (?, ?, ?, ?)";
+
+          db.query(
+            userParticipantQuery,
+            [creator_id, circle_id, participant_name, "lead"],
+            (err, result) => {
+              if (err) {
+                return res.status(500).json({ error: err.message });
+              }
+
+              return res.json({
+                success: true,
+                message: "Circle created successfully",
+                circle_id: circle_id,
+              });
+            }
+          );
+          return res.json({
+            success: true,
+            message: "recieved participant name successfully",
+            participant_name: participant_name,
+          });
+        });
+      });
 
       return res.json({
         success: true,

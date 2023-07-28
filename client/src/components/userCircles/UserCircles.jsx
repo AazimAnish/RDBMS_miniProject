@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./dbCircleCard.css";
+import "../dbCircleCard/dbCircleCard.css";
 
-const CircleCards = () => {
+const UserCircles = () => {
   const [circles, setCircles] = useState([]);
   useEffect(() => {
     // Fetch the circles when the component mounts
@@ -38,4 +38,4 @@ const CircleCards = () => {
   );
 };
 
-export default CircleCards;
+export default UserCircles;

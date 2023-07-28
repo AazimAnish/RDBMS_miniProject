@@ -1,11 +1,11 @@
-/* CSS for styling the cards */
-.card-container {
+/* CSS for styling the db-cards */
+.db-card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
   
-  .card {
+  .db-card {
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -13,18 +13,18 @@
     width: 250px;
   }
   
-  .card h1 {
+  .db-card h1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
-  .card p {
+  .db-card p {
     font-size: 16px;
     margin-bottom: 10px;
   }
   
-  .card img {
+  .db-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -32,7 +32,7 @@
   }
   
   /* Add hover effect */
-  .card:hover {
+  .db-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
   }

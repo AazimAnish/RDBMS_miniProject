@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./HomeCircle.css";
-import Navbar from "../../../Components/Navbar/Navbar";
+import Navbar from "../../../components/navbar/navbar";
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
 // import InputLabel from "@mui/material/InputLabel";

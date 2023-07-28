@@ -12,6 +12,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 import cookieParser from "cookie-parser";
+import getUserCircle from "./get_user_circle.js";
 const app = express();
 // Use cookie-parser middleware to parse cookies from incoming requests
 app.use(cookieParser());
@@ -38,6 +39,7 @@ app.use("/login", login);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/create_circle", createCircle);
 app.use("/get_circles", getCircle);
+app.use("/get_user_circles", getUserCircle);
 
 // Start the server
 app.listen(8800, () => {
