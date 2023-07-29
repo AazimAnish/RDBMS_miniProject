@@ -1,15 +1,20 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import Cookies from "js-cookie"; // Import the js-cookie library
 import "./navbar.css";
+
 const Navbar = () => {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Check login status when the component mounts
+  useEffect(() => {
+    const isLoggedInCookie = Cookies.get("isLoggedIn");
+    setIsLoggedIn(!isLoggedInCookie);
+  }, []);
 
   const onResourceContainerClick = useCallback(() => {
     navigate("/resources");
-  }, [navigate]);
-
-  const onLoginContainerClick = useCallback(() => {
-    navigate("/login");
   }, [navigate]);
 
   const onLearnContainerClick = useCallback(() => {
@@ -23,6 +28,16 @@ const Navbar = () => {
   const onGetStartedContainerClick = useCallback(() => {
     navigate("/signup-mail");
   }, [navigate]);
+
+  const onLoginContainerClick = useCallback(() => {
+    navigate("/login");
+  }, [navigate]);
+
+  const onLogoutClick = useCallback(() => {
+    // Clear the isLoggedIn cookie and update the state
+    Cookies.remove("isLoggedIn");
+    setIsLoggedIn(false);
+  }, []);
 
   return (
     <div className="navbar">
@@ -41,19 +56,28 @@ const Navbar = () => {
               <div className="resources2">Learn</div>
             </div>
             <div className="clubs" onClick={onClubContainerClick}>
-                <div className="resources2">Clubs</div>
+              <div className="resources2">Clubs</div>
             </div>
           </div>
         </div>
         <div className="div4">
-          <div className="login1" onClick={onLoginContainerClick}>
-            <div className="login2, clubs">Login</div>
-          </div>
-          <div className="get-started" onClick={onGetStartedContainerClick}>
-            <div className="nav-divw-full2">
-              <div className="get-started1">Get started</div>
+          {isLoggedIn ? ( // Show Logout button if logged in
+            <div className="login1" onClick={onLogoutClick}>
+              <div className="login2, clubs">Logout</div>
             </div>
-          </div>
+          ) : (
+            // Show Login and Get Started buttons if not logged in
+            <>
+              <div className="login1" onClick={onLoginContainerClick}>
+                <div className="login2, clubs">Login</div>
+              </div>
+              <div className="get-started" onClick={onGetStartedContainerClick}>
+                <div className="nav-divw-full2">
+                  <div className="get-started1">Get started</div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
