@@ -1,4 +1,4 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import cors from "cors";
 import signup from "./signup.js"; // Import the signu router
 import login from "./login.js";
@@ -15,18 +15,23 @@ import cookieParser from "cookie-parser";
 import getUserCircle from "./get_user_circle.js";
 import circle_resources from "./circle_resources.js";
 const app = express();
+// app.use(cors()); // Add CORS middleware
 // Use cookie-parser middleware to parse cookies from incoming requests
 app.use(cookieParser());
-
+app.use(express.urlencoded())
 // Add middleware and other configurations here
 
-app.use(cors()); // Add CORS middleware
+app.use(
+  cors({
+    origin: '*'
+  })
+);
 app.use(express.json()); // Add JSON parsing middleware
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+  // res.setHeader("Access-Control-Allow-Credentials", "true");
   next();
 });
 
@@ -41,7 +46,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/create_circle", createCircle);
 app.use("/get_circles", getCircle);
 app.use("/get_user_circles", getUserCircle);
-app.use("/circle_resources",circle_resources)
+app.use("/circle_resources", circle_resources)
 // Start the server
 app.listen(8800, () => {
   console.log("Connected to backend");
