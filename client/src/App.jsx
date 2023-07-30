@@ -14,6 +14,7 @@ import CreateCircle from "./pages/learningCircle/CreateCircle/CreateCircle";
 import JoinCircle from "./pages/learningCircle/JoinCircle/JoinCircle";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import CirclePage from "./pages/learningCircle/CirclePage/CirclePage";
+import CircleResource from "./pages/circleResource/circleResource";
 
 
 
@@ -94,7 +95,7 @@ function App() {
   
     <Routes>
       <Route path="/" element={<Homepage />} />
-      <Route path="/resources" element={<Resources />} />
+      <Route path="/resources" element={<CircleResource />} />
       <Route path="/signup-mail" element={<SignUpMail />} />
       <Route path="/login" element={<Login />} />
       <Route path="/create-circle" element={<CreateCircle />} />

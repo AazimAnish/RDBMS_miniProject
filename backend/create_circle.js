@@ -5,6 +5,7 @@ import multer from "multer";
 import path from "path";
 
 const createCircle = express.Router();
+createCircle.use(express.json());
 createCircle.use(cookieParser());
 
 const db = mysql.createConnection({
