@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./circleResource.css";
 
 const CircleResource = () => {
   const [resourceType, setResourceType] = useState("");
@@ -8,9 +9,16 @@ const CircleResource = () => {
   const [description, setDescription] = useState("");
   const [uploadedResources, setUploadedResources] = useState([]);
 
-  const handleResourceTypeChange = (event) => {
-    setResourceType(event.target.value);
+  const isCookiePresent = () => {
+    return document.cookie.includes("user_id=");
   };
+
+const handleResourceTypeChange = (event) => {
+  if (event?.target?.value) { // Check if event, event.target, and event.target.value are defined
+    setResourceType(event.target.value);
+  }
+};
+
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -33,12 +41,23 @@ const CircleResource = () => {
 
   const fetchResources = async () => {
     try {
-      const response = await axios.get("http://localhost:8800/circle_resources");
+      // Include the selected resource type as a query parameter in the API call
+      const response = await axios.get("http://localhost:8800/circle_resources", {
+        params: {
+          resourceType: resourceType,
+        },
+      });
       setUploadedResources(response.data);
     } catch (error) {
       console.error("Error fetching resources:", error);
     }
   };
+
+  useEffect(() => {
+    fetchResources();
+  }, [resourceType]); // Refetch resources whenever the resourceType changes
+
+
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent form submission
@@ -85,27 +104,52 @@ const CircleResource = () => {
     fetchResources();
   }, []);
 
+//   const renderUploadedResources = () => {
+//     return uploadedResources.map((resource) => (
+//       <div key={resource.resource_id} className="card">
+//         <h3 className="card-content">{resource.resource_name}</h3>
+//         <p className="card-content">{resource.description}</p>
+//         <p className="card-content">Category: {resource.resource_type}</p>
+//         <div className="card-actions">
+//           <a className="card-button" href={`http://localhost:8800/resources/${resource.file_url}`} target="_blank" rel="noopener noreferrer">
+//             Download
+//           </a>
+//           {isCookiePresent() && (
+//             <button className="card-button" onClick={() => handleDeleteResource(resource.resource_id)}>Delete</button>
+//           )}
+//         </div>
+//       </div>
+//     ));
+//   };
+
   const renderUploadedResources = () => {
-    return uploadedResources.map((resource) => (
-      <div key={resource.resource_id} className="resource-card">
-        <h3>{resource.resource_name}</h3>
-        <p>{resource.description}</p>
-        <p>Category: {resource.resource_type}</p>
+    // Filter the resources based on the selected resource type
+    const filteredResources = resourceType
+      ? uploadedResources.filter((resource) => resource.resource_type === resourceType)
+      : uploadedResources;
+
+    return filteredResources.map((resource) => (
+      <div key={resource.resource_id} className="card">
+        <h3 className="card-content">{resource.resource_name}</h3>
+        <p className="card-content">{resource.description}</p>
+        <p className="card-content">Category: {resource.resource_type}</p>
         <div className="card-actions">
-          <a href={`http://localhost:8800/resources/${resource.file_url}`} target="_blank" rel="noopener noreferrer">
+          <a className="card-button" href={`http://localhost:8800/resources/${resource.file_url}`} target="_blank" rel="noopener noreferrer">
             Download
           </a>
-          <button onClick={() => handleDeleteResource(resource.resource_id)}>Delete</button>
+          {isCookiePresent() && (
+            <button className="card-button" onClick={() => handleDeleteResource(resource.resource_id)}>Delete</button>
+          )}
         </div>
       </div>
     ));
   };
-
+  
   const handleDeleteResource = async (resourceId) => {
     try {
       const response = await axios.delete(
-        // `http://localhost:8800/circle_resources/${resourceId}/${cookieId}`,
-        `http://localhost:8800/circle_resources/${resourceId}}`,
+        `http://localhost:8800/circle_resources/${resourceId}`,
+        // `http://localhost:8800/circle_resources/${resourceId}}`,
         {
             withCredentials: true
         }
@@ -129,6 +173,18 @@ const CircleResource = () => {
     }
   };
   
+
+  const ResourceFilterBar = ({ handleResourceTypeChange }) => {
+    return (
+      <div className="filter-bar">
+        <button onClick={() => handleResourceTypeChange("")}>All</button>
+        <button onClick={() => handleResourceTypeChange("react")}>React</button>
+        <button onClick={() => handleResourceTypeChange("javascript")}>JavaScript</button>
+        <button onClick={() => handleResourceTypeChange("php")}>PHP</button>
+        <button onClick={() => handleResourceTypeChange("blockchain")}>Blockchain</button>
+      </div>
+    );
+  };
   
 
   return (
@@ -169,16 +225,17 @@ const CircleResource = () => {
         onChange={handleDescriptionChange}
         required
       />
-      <select value={resourceType} onChange={handleResourceTypeChange} required>
-        <option value="">Select Resource Type</option>
-        <option value="react">React</option>
-        <option value="javascript">JavaScript</option>
-        <option value="php">PHP</option>
-        <option value="blockchain">Blockchain</option>
-      </select>
+<select value={resourceType} onChange={handleResourceTypeChange} required>
+  <option value="">Select Resource Type</option>
+  <option value="react">React</option>
+  <option value="javascript">JavaScript</option>
+  <option value="php">PHP</option>
+  <option value="blockchain">Blockchain</option>
+</select>
       <button type="submit">Submit</button>
     </form>
-    <div className="resource-cards-container">{renderUploadedResources()}</div>
+    <ResourceFilterBar handleResourceTypeChange={handleResourceTypeChange} />
+    <div className="card-flex">{renderUploadedResources()}</div>
     </>
   );
 };

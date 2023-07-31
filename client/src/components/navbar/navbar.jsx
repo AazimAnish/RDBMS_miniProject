@@ -1,17 +1,19 @@
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Cookies from "js-cookie"; // Import the js-cookie library
+import { useCookies } from 'react-cookie';
 import "./navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
 
-  // Check login status when the component mounts
-  useEffect(() => {
-    const isLoggedInCookie = Cookies.get("isLoggedIn");
-    setIsLoggedIn(!isLoggedInCookie);
-  }, []);
+// Check login status when the component mounts
+useEffect(() => {
+  const isLoggedInCookie = Cookies.get("isLoggedIn");
+  setIsLoggedIn(!isLoggedInCookie); // Set isLoggedIn based on the presence of the cookie
+}, []);
 
   const onResourceContainerClick = useCallback(() => {
     navigate("/resources");
@@ -35,7 +37,7 @@ const Navbar = () => {
 
   const onLogoutClick = useCallback(() => {
     // Clear the isLoggedIn cookie and update the state
-    Cookies.remove("isLoggedIn");
+    removeCookie('user_id'); // Provide the path explicitly
     setIsLoggedIn(false);
   }, []);
 
