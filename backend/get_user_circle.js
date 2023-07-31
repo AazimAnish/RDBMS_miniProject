@@ -35,9 +35,9 @@ getUserCircle.get("/", async (req, res) => {
       return res.status(401).json({ error: "User not authenticated" });
     }
 
-    // Fetch the circles that the user has joined from the database
+    // Fetch the circles that the user has joined from the database along with their roles
     const getCirclesQuery = `
-      SELECT learningcircles.* 
+      SELECT learningcircles.*, circleparticipants.role as user_role
       FROM learningcircles 
       JOIN circleparticipants ON learningcircles.circle_id = circleparticipants.circle_id 
       WHERE circleparticipants.user_id = ?

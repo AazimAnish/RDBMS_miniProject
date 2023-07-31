@@ -12,7 +12,9 @@ const CircleCards = () => {
   const fetchCircles = async () => {
     try {
       // Make a GET request to your backend API endpoint
-      const response = await axios.get("http://localhost:8800/get_circles");
+      const response = await axios.get("http://localhost:8800/get_circles", {
+        withCredentials: true,
+      });
       setCircles(response.data);
     } catch (error) {
       console.error("Error fetching circles:", error);
