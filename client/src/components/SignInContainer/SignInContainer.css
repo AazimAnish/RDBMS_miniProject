@@ -84,11 +84,11 @@ border-radius: 12px;
 #btn {
   width: 528px;
 height: 64px;
-
-background: black;
-opacity: 0.25;
+margin-top: 25px;
+background: rgb(239, 147, 165);
+opacity: 1;
 border-radius: 32px;
-color: white;
+color: rgb(255, 255, 255);
 }
 /*
 

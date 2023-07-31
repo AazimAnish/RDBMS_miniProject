@@ -86,7 +86,6 @@ border-radius: 12px;
 #btn {
   width: 528px;
 height: 64px;
-
 background: black;
 opacity: 0.25;
 border-radius: 32px;
@@ -229,19 +228,19 @@ My edit above*/
 }
 
 .signbtn {
-  background-color: #1963c5 !important;
-  color: #fff;
+  background-color: #6b96e8 !important;
+  color: #fef8f8;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 528px;
+  width: 485px;
   margin-top: 30px;
   height: 46px;
 }
 
 .signbtn:hover {
-  background-color: #0056b3 !important;
+  background-color: #e26f91 !important;
 }
