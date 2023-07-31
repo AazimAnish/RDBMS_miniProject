@@ -16,7 +16,7 @@ removeMeeting.post("/:circle_id/:meeting_id", async (req, res) => {
 
     // Delete the meeting from the database based on the circle_id and meeting_id
     const deleteMeetingQuery =
-      "DELETE FROM meetings WHERE circle_id = ? AND meeting_id = ?";
+      "DELETE FROM circlemeetings WHERE circle_id = ? AND meeting_id = ?";
     await connection.execute(deleteMeetingQuery, [circleId, meetingId]);
 
     // Close the connection

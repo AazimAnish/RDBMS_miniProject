@@ -18,7 +18,7 @@ updateMeeting.post("/:circle_id/:meeting_id", async (req, res) => {
 
     // Update the meeting date and time in the database based on the circle_id and meeting_id
     const updateMeetingQuery =
-      "UPDATE meetings SET meeting_date = ?, meeting_time = ? WHERE circle_id = ? AND meeting_id = ?";
+      "UPDATE circlemeetings SET meeting_date = ?, meeting_time = ? WHERE circle_id = ? AND meeting_id = ?";
     await connection.execute(updateMeetingQuery, [
       meetDate,
       meetTime,
