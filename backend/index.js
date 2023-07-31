@@ -11,6 +11,11 @@ import getUserCircle from "./get_user_circle.js";
 import circle_resources from "./circle_resources.js";
 import leaveCircle from "./leave_circle.js";
 import addMeeting from "./add_meeting.js";
+import viewMeeting from "./view_meeting.js";
+import joinCircle from "./join_circle.js";
+import userJoinedCircles from "./user_joined_circles.js";
+import removeMeeting from "./remove_meeting.js";
+import updateMeeting from "./update_meeting.js";
 
 const __filename = fileURLToPath(import.meta.url);
 
@@ -45,6 +50,11 @@ app.use("/get_user_circle", getUserCircle);
 app.use("/circle_resources", circle_resources);
 app.use("/leave_circle", leaveCircle);
 app.use("/add_meeting", addMeeting);
+app.use("/view_meeting", viewMeeting);
+app.use("/join_circle", joinCircle);
+app.use("/user_joined_circles", userJoinedCircles);
+app.use("/remove_meeting", removeMeeting);
+app.use("/update_meeting", updateMeeting);
 // Start the server
 app.listen(8800, () => {
   console.log("Connected to backend");
