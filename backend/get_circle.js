@@ -43,7 +43,7 @@ getCircle.get("/", async (req, res) => {
     // console.log(rows);
 
     // Close the connection
-    // connection.end();
+    connection.end();
 
     // Send the circles as the response
     // res.json(rows);

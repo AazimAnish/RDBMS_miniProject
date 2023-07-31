@@ -1,24 +1,11 @@
 import express from "express";
 import mysql from "mysql2";
 import cookieParser from "cookie-parser";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-
-const __dirname = path.dirname(__filename);
 
 const getUserCircle = express.Router();
 getUserCircle.use(cookieParser());
 
-// const db = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: "password",
-//   database: "miniproject",
-// });
-// getUserCircle.use("/uploads", express.static(path.join(__dirname, "../uploads")));
-// Endpoint to fetch uploaded circles
+// Endpoint to fetch circles that the user has joined
 getUserCircle.get("/", async (req, res) => {
   try {
     // Connect to your MySQL database using the promise-based version
@@ -29,27 +16,39 @@ getUserCircle.get("/", async (req, res) => {
       database: "miniproject",
     });
 
-    // Fetch circles from the database using async/
-    // const rows = connection.query("SELECT * FROM learningcircles");
-    connection.query("SELECT * FROM learningcircles ", (error, results) => {
-      if (error) {
-        console.error("Error occurred while fetching sponregs:", error);
-        res.status(500).json({ error: "An internal server error occurred" });
-      } else {
-        res.status(200).json(results);
-        // console.log("spon1", results);
-      }
-    });
-    // console.log(rows);
+    // Promisify the connection query method
+    const queryAsync = (query, values) => {
+      return new Promise((resolve, reject) => {
+        connection.query(query, values, (err, result) => {
+          if (err) reject(err);
+          else resolve(result);
+        });
+      });
+    };
 
-    // Close the connection
-    // connection.end();
+    // Fetch circles from the database using async/await
+    const user_id = req.cookies.user_id;
+    // console.log(user_id);
 
-    // Send the circles as the response
-    // res.json(rows);
-  } catch (error) {
-    console.error("Error fetching circles:", error);
-    res.status(500).json({ error: "Internal server error" });
+    // Check if user is authenticated (user_id is available in the cookie)
+    if (!user_id) {
+      return res.status(401).json({ error: "User not authenticated" });
+    }
+
+    // Fetch the circles that the user has joined from the database
+    const getCirclesQuery = `
+      SELECT learningcircles.* 
+      FROM learningcircles 
+      JOIN circleparticipants ON learningcircles.circle_id = circleparticipants.circle_id 
+      WHERE circleparticipants.user_id = ?
+    `;
+
+    const result = await queryAsync(getCirclesQuery, [user_id]);
+
+    // Send the fetched circles as the response
+    return res.json({ success: true, circles: result });
+  } catch (err) {
+    return res.status(500).json({ error: err.message });
   }
 });
 

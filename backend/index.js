@@ -14,8 +14,17 @@ const __dirname = path.dirname(__filename);
 import cookieParser from "cookie-parser";
 import getUserCircle from "./get_user_circle.js";
 import circle_resources from "./circle_resources.js";
+import leaveCircle from "./leave_circle.js";
 const app = express();
 // Use cookie-parser middleware to parse cookies from incoming requests
+app.options("*", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.sendStatus(200); // Respond with a status code 200 to indicate preflight success
+});
+
 app.use(cookieParser());
 
 // Add middleware and other configurations here
@@ -40,8 +49,9 @@ app.use("/login", login);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/create_circle", createCircle);
 app.use("/get_circles", getCircle);
-app.use("/get_user_circles", getUserCircle);
-app.use("/circle_resources",circle_resources)
+app.use("/get_user_circle", getUserCircle);
+app.use("/circle_resources", circle_resources);
+app.use("/leave_circle", leaveCircle);
 // Start the server
 app.listen(8800, () => {
   console.log("Connected to backend");

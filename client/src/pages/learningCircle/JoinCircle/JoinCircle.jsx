@@ -1,6 +1,5 @@
-import React from "react";
-import './JoinCircle.css';
-import join from '../../../assets/join.png'
+import "./JoinCircle.css";
+import join from "../../../assets/join.png";
 // import Box from "@mui/material/Box";
 // import FormControl from "@mui/material/FormControl";
 // import InputLabel from "@mui/material/InputLabel";
@@ -9,74 +8,69 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Footer from "../../../components/footer/footer";
 import Navbar from "../../../components/navbar/navbar";
-
+import UserCircleCard from "../../../components/dbUserCircleCard/dbUserCircleCard";
 
 const JoinCircle = () => {
   return (
     <div className="container">
       <div className="navbar">
-        < Navbar />
+        <Navbar />
       </div>
 
-
-      <div className= 'main_container_join'>
-        <div className= 'first_view_container'>
-          <img src={join} alt="" className= 'mimage' />
-          <div className= 'fsview'>
-            <p className= 'fsheading'>
-              Let's Join <br /> <span>Learning Circles</span>
+      <div className="main_container_join">
+        <div className="first_view_container">
+          <img src={join} alt="" className="mimage" />
+          <div className="fsview">
+            <p className="fsheading">
+              Lets Join <br /> <span>Learning Circles</span>
             </p>
-            <p className= 'fstagline'>
-              In order to join a learning circle, you need to enter the circle code as
-              well as a secret key. Both of these credentials can be retrieved from
-              your circle lead. If you already have them fill them out, and you are
-              good to go!.
+            <p className="fstagline">
+              In order to join a learning circle, you need to enter the circle
+              code as well as a secret key. Both of these credentials can be
+              retrieved from your circle lead. If you already have them fill
+              them out, and you are good to go!.
             </p>
             <a href="/create-circle" rel="noopener noreferrer">
-              <button className= 'search_button'>
-                create
-              </button>
+              <button className="search_button">create</button>
             </a>
           </div>
         </div>
+        <UserCircleCard />
 
-
-
-
-            <div className='second_form_section'>
-              <div className='ff_content'>
-                <p className='ff_heading'>Enter Details</p>
-                <p className='ff_tagline'>
-                Type in your circle name to verify it to join a learning circle
-                </p>
-              </div>
-              <div className='ff_form_fields_join'>
-                <TextField
-                  sx={{
-                    minWidth: 300,
-                    maxWidth: 300,
-                    margin: 1.5,
-                    marginLeft: 0,
-                  }}
-                  required
-                  // error={
-                  //   errors && JSON.stringify(errors).includes("lead.name")
-                  //     ? true
-                  //     : false
-                  // }
-                  // helperText={
-                  //   errors && JSON.stringify(errors).includes("lead.name")
-                  //     ? "Lead Name is Required"
-                  //     : ""
-                  // }
-                  name="name"
-                  id="outlined-basic"
-                  label="Circle Name"
-                  variant="outlined"
-                  // value={create.name}
-                  // onChange={leadchangeHandler}
-                />
-                {/* <TextField
+        <div className="second_form_section">
+          <div className="ff_content">
+            <p className="ff_heading">Enter Details</p>
+            <p className="ff_tagline">
+              Type in your circle name to verify it to join a learning circle
+            </p>
+          </div>
+          <div className="ff_form_fields_join">
+            <TextField
+              sx={{
+                minWidth: 300,
+                maxWidth: 300,
+                margin: 1.5,
+                marginLeft: 0,
+              }}
+              required
+              // error={
+              //   errors && JSON.stringify(errors).includes("lead.name")
+              //     ? true
+              //     : false
+              // }
+              // helperText={
+              //   errors && JSON.stringify(errors).includes("lead.name")
+              //     ? "Lead Name is Required"
+              //     : ""
+              // }
+              name="name"
+              id="outlined-basic"
+              label="Circle Name"
+              variant="outlined"
+              // value={create.name}
+              // onChange={leadchangeHandler}
+            />
+            {/* <TextField
                   sx={{
                     minWidth: 300,
                     maxWidth: 300,
@@ -102,7 +96,7 @@ const JoinCircle = () => {
                   // onChange={leadchangeHandler}
                 /> */}
 
-                {/* <TextField
+            {/* <TextField
                   required
                   sx={{
                     minWidth: 300,
@@ -117,7 +111,7 @@ const JoinCircle = () => {
                   // value={create.phone}
                   // onChange={changeHandler}
                 /> */}
-                {/* <TextField
+            {/* <TextField
                   required
                   sx={{
                     minWidth: 300,
@@ -177,7 +171,7 @@ const JoinCircle = () => {
                   // onChange={changeHandler}
                 /> */}
 
-                {/* <TextField
+            {/* <TextField
                   sx={{
                     minWidth: 300,
                     maxWidth: 300,
@@ -209,34 +203,32 @@ const JoinCircle = () => {
                   //   setConfirm(e.target.value);
                   // }}
                 /> */}
-              </div>
-            </div>
-
-            <Button className="joincirclebutton"
-              sx={{ minWidth: 300, maxWidth: 300, margin: 1.5, marginLeft: 0 }}
-              // disabled={
-              //   create.phone &&
-              //   create.phone.length >= 10 &&
-              //   college &&
-              //   verify &&
-              //   confirm === create.passcode
-              //     ? false
-              //     : true
-              // }
-              // onClick={() => {
-              //   postData();
-              // }}
-              variant="contained"
-            >
-              Join Circle
-            </Button>
-
-
+          </div>
         </div>
 
-        < Footer />
+        <Button
+          className="joincirclebutton"
+          sx={{ minWidth: 300, maxWidth: 300, margin: 1.5, marginLeft: 0 }}
+          // disabled={
+          //   create.phone &&
+          //   create.phone.length >= 10 &&
+          //   college &&
+          //   verify &&
+          //   confirm === create.passcode
+          //     ? false
+          //     : true
+          // }
+          // onClick={() => {
+          //   postData();
+          // }}
+          variant="contained"
+        >
+          Join Circle
+        </Button>
+      </div>
 
-                </div>
+      <Footer />
+    </div>
   );
 };
 

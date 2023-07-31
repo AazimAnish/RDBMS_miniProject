@@ -28,7 +28,7 @@ const upload = multer({ storage: storage });
 createCircle.post("/", upload.single("cover_photo"), (req, res) => {
   const { circle_name, description, max_participants } = req.body;
   const creator_id = req.cookies.user_id;
-  console.log(creator_id);
+  console.log("this is the id" + creator_id);
   // Check if user is authenticated (user_id is available in the cookie)
   if (!creator_id) {
     console.log("hi");
