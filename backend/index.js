@@ -1,4 +1,4 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import cors from "cors";
 import signup from "./signup.js"; // Import the signu router
 import login from "./login.js";
@@ -16,8 +16,19 @@ const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 const app = express();
 
+=======
+
+import cookieParser from "cookie-parser";
+import getUserCircle from "./get_user_circle.js";
+import circle_resources from "./circle_resources.js";
+import leaveCircle from "./leave_circle.js";
+const app = express();
+// app.use(cors()); // Add CORS middleware
+// Use cookie-parser middleware to parse cookies from incoming requests
+>>>>>>> 7c458910738eb5ad048a17d74ecb2f365760e8d6
 app.options("*", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
