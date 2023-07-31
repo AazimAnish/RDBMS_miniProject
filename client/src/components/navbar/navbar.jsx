@@ -16,9 +16,9 @@ const Navbar = () => {
     navigate("/home-circle");
   }, [navigate]);
 
-  const onClubContainerClick = useCallback(() => {
-    navigate("/club");
-  }, [navigate]);
+  // const onClubContainerClick = useCallback(() => {
+  //   navigate("/club");
+  // }, [navigate]);
 
   const onGetStartedContainerClick = useCallback(() => {
     navigate("/signup-mail");
@@ -40,9 +40,9 @@ const Navbar = () => {
             <div className="clubs" onClick={onLearnContainerClick}>
               <div className="resources2">Learn</div>
             </div>
-            <div className="clubs" onClick={onClubContainerClick}>
+            <a href="#club" className="clubs" >
                 <div className="resources2">Clubs</div>
-            </div>
+            </a>
           </div>
         </div>
         <div className="div4">

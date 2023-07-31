@@ -5,6 +5,9 @@ import tinkerhubLogo from "../../assets/images/tinkerhub-logo.png";
 import iedcLogo from "../../assets/images/iedc-logo.png";
 import igbcLogo from "../../assets/images/igbc-logo.png";
 import ieeeLogo from "../../assets/images/ieee-logo.png";
+
+
+
 const ClubSection = () => {
   const clubs = [
     {
@@ -76,7 +79,10 @@ const ClubSection = () => {
   ];
 
   return (
-    <div className="club-section">
+    <div className="club-section" id="club">
+      <nav>
+
+      </nav>
         <div className="divcontainer">
           <div className="divw-full2">
             <div className="h2mx-auto1">

@@ -229,7 +229,7 @@ My edit above*/
 
 .signbtn {
   background-color: #6b96e8 !important;
-  color: #fef8f8;
+  color: #070707;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -242,5 +242,5 @@ My edit above*/
 }
 
 .signbtn:hover {
-  background-color: #e26f91 !important;
+  background-color: #fefb74 !important;
 }
