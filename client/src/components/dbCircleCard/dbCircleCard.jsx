@@ -33,6 +33,7 @@ const CircleCards = () => {
           withCredentials: true,
         }
       );
+      // console.log(response.data);
       setUserJoinedCircles(response.data);
     } catch (error) {
       console.error("Error fetching user's joined circles:", error);
@@ -42,7 +43,7 @@ const CircleCards = () => {
   const handleJoinCircle = async (circle_id) => {
     try {
       // Make a POST request to join the circle
-      console.log("circle_id", circle_id);
+      // console.log("circle_id", circle_id);
       await axios.post(
         "http://localhost:8800/join_circle",
         { circle_id },
@@ -68,7 +69,9 @@ const CircleCards = () => {
                 src={`http://localhost:8800/uploads/${circle.cover_photo}`}
                 alt="Circle Cover"
               />
-              {userJoinedCircles.includes(circle.circle_id) ? (
+              {userJoinedCircles.some(
+                (userCircle) => userCircle.circle_id === circle.circle_id
+              ) ? (
                 <p>Joined</p>
               ) : (
                 <button onClick={() => handleJoinCircle(circle.circle_id)}>

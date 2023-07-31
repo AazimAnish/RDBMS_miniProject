@@ -28,6 +28,7 @@ userJoinedCircles.get("/", async (req, res) => {
         console.error("Error fetching user's joined circles:", error);
         res.status(500).json({ error: "An internal server error occurred" });
       } else {
+        // console.log("userjoinedcircles", results);
         res.status(200).json(results);
       }
     });
