@@ -11,6 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 
 const __dirname = path.dirname(__filename);
 
+
 import cookieParser from "cookie-parser";
 import getUserCircle from "./get_user_circle.js";
 import circle_resources from "./circle_resources.js";
@@ -23,12 +24,14 @@ app.use(express.urlencoded())
 
 app.use(
   cors({
-    origin: '*'
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'DELETE'],
+    credentials: true
   })
 );
 app.use(express.json()); // Add JSON parsing middleware
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   // res.setHeader("Access-Control-Allow-Credentials", "true");

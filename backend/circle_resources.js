@@ -21,7 +21,7 @@ circle_resources.use(cookieParser());
 // Enable CORS with appropriate options
 // circle_resources.use(
 //   cors({
-//     origin: '*',
+//     origin: 'http://localhost:5173',
 //     credentials: true,
 //   })
 // );
@@ -80,8 +80,19 @@ circle_resources.post("/", upload.single("file"), (req, res) => {
 
 // GET request to fetch all resources from the database
 circle_resources.get("/", (req, res) => {
-  const query = "SELECT * FROM circleresources";
-  db.query(query, (err, results) => {
+  const resourceType = req.query.resourceType; // Get the resource type from the query parameter
+
+  // Construct the SELECT query based on the presence of the resourceType parameter
+  let query;
+  let params = [];
+  if (resourceType) {
+    query = "SELECT * FROM circleresources WHERE resource_type = ?";
+    params = [resourceType];
+  } else {
+    query = "SELECT * FROM circleresources";
+  }
+
+  db.query(query, params, (err, results) => {
     if (err) {
       console.error("Error fetching resources from the database:", err);
       return res.status(500).json({ error: "Failed to fetch resources." });
@@ -90,17 +101,18 @@ circle_resources.get("/", (req, res) => {
   });
 });
 
+
 // circle_resources.delete("/:resourceId/:cookieId", (req, res) => {
   circle_resources.delete("/:resourceId", (req, res) => {
   const resourceId = req.params.resourceId;
 
   // Check if user is authenticated (user_id is available in the cookie)
-  const uploader_id = req.cookies.user_id || NULL;
+  // const uploader_id = req.cookies.user_id || NULL;
   
-  if (!uploader_id) {
-    console.log(uploader_id)
-    return res.status(401).json({ error: "User not authenticated" });
-  }
+  // if (!uploader_id) {
+  //   console.log(uploader_id)
+  //   return res.status(401).json({ error: "User not authenticated" });
+  // }
 
   // First, retrieve the file_url of the resource from the database
   const selectQuery = "SELECT file_url FROM circleresources WHERE resource_id = ?";
