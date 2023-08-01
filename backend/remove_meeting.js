@@ -10,7 +10,7 @@ removeMeeting.post("/:circle_id/:meeting_id", async (req, res) => {
     const connection = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "password",
+      // password: "password",
       database: "miniproject",
     });
 

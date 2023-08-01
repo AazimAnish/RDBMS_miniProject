@@ -29,7 +29,7 @@ circle_resources.use(cookieParser());
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password",
+  // password: "password",
   database: "miniproject",
 });
 
@@ -49,10 +49,10 @@ circle_resources.post("/", upload.single("file"), (req, res) => {
   const uploader_id = req.cookies.user_id || null; // If user_id is not available in cookies, set it to null
 
   // Check if user is authenticated (user_id is available in the cookie)
-  if (!uploader_id) {
+  // if (!uploader_id) {
 
-    return res.status(401).json({ error: "User not authenticated" });
-  }
+  //   return res.status(401).json({ error: "User not authenticated" });
+  // }
 
   // Check if the file is uploaded
   const file_url = req.file ? req.file.filename : null;

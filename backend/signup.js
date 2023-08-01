@@ -7,7 +7,7 @@ const signup = express.Router(); // Create a new instance of Router
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password",
+  // password: "password",
   database: "miniproject",
 });
 

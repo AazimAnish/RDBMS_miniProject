@@ -6,7 +6,7 @@ const login = express.Router();
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password",
+  // password: "password",
   database: "miniproject",
 });
 login.use(cookieParser());
@@ -18,11 +18,12 @@ login.post("/", (req, res) => {
   // Fetch user data from the database
   const q = "SELECT * FROM users WHERE username = ? AND password = ?";
   db.query(q, [username, password], (err, data) => {
+    console.log(username, password)
     if (err) {
       return res.json({ success: false, error: err.message });
     }
 
-    if (data.length === 1) {
+    if (data.length > 1) {
       // User authenticated successfully
       // Set the user_id as a cookie
       // Set the user_id as a cookie
@@ -32,6 +33,7 @@ login.post("/", (req, res) => {
 
       return res.json({ success: true, user: data[0] });
     } else {
+      console.log(data.length)
       // User login failed
       return res.json({
         success: false,
