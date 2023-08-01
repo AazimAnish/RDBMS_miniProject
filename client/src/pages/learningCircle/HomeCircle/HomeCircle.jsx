@@ -19,9 +19,7 @@ const CreateCircle = () => {
       {/* <div className= "navbar"> */}
       <Navbar />
       {/* </div> */}
-      <div className="dbCirclecontainer">
-        <CircleCards />
-      </div>
+      
       <div className="first_view_container_home">
         <img src={learnhomeimg} alt="" className="mimagehome" />
         <div className="first_section">
@@ -52,7 +50,9 @@ const CreateCircle = () => {
           </div>
 
           <div className="circleSection">
-            <CircleSection />
+          <div className="dbCirclecontainer">
+        <CircleCards />
+      </div>
           </div>
         </div>
 

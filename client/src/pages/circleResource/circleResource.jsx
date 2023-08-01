@@ -134,12 +134,12 @@ const handleResourceTypeChange = (event) => {
         <p className="card-content">{resource.description}</p>
         <p className="card-content">Category: {resource.resource_type}</p>
         <div className="card-actions">
-          <a className="card-button" href={`http://localhost:8800/resources/${resource.file_url}`} target="_blank" rel="noopener noreferrer">
+          <a className="card-button-res" href={`http://localhost:8800/resources/${resource.file_url}`} target="_blank" rel="noopener noreferrer">
             Download
           </a>
-          {isCookiePresent() && (
+          {/* {isCookiePresent() && ( */}
             <button className="card-button" onClick={() => handleDeleteResource(resource.resource_id)}>Delete</button>
-          )}
+          {/* )} */}
         </div>
       </div>
     ));
@@ -189,7 +189,7 @@ const handleResourceTypeChange = (event) => {
 
   return (
     <>
-    <form className="main" onSubmit={handleSubmit}>
+    <form className="main-res" onSubmit={handleSubmit}>
       <div
         className="drag-drop-area"
         onDrop={handleFileDrop}
@@ -234,14 +234,10 @@ const handleResourceTypeChange = (event) => {
 </select>
       <button type="submit">Submit</button>
     </form>
-    <ResourceFilterBar handleResourceTypeChange={handleResourceTypeChange} />
+    {/* <ResourceFilterBar handleResourceTypeChange={handleResourceTypeChange} /> */}
     <div className="card-flex">{renderUploadedResources()}</div>
     </>
   );
 };
 
 export default CircleResource;
-
-
-
-

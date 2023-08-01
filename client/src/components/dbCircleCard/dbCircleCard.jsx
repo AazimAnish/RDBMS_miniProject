@@ -61,20 +61,21 @@ const CircleCards = () => {
     <div className="db-card-container">
       {circles &&
         circles.map((circle) => (
-          <div className="db-card" key={circle.id}>
+          <div className="card" key={circle.id}>
             <div>
               <h1>{circle.circle_name}</h1>
               <p>{circle.description}</p>
-              <img
+              <img className="card-img"
                 src={`http://localhost:8800/uploads/${circle.cover_photo}`}
                 alt="Circle Cover"
               />
+              <br/>
               {userJoinedCircles.some(
                 (userCircle) => userCircle.circle_id === circle.circle_id
               ) ? (
                 <p>Joined</p>
               ) : (
-                <button onClick={() => handleJoinCircle(circle.circle_id)}>
+                <button className="card-button" onClick={() => handleJoinCircle(circle.circle_id)}>
                   Join
                 </button>
               )}
