@@ -29,7 +29,7 @@ circle_resources.use(cookieParser());
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password",
+  // password: "password",
   database: "miniproject",
 });
 

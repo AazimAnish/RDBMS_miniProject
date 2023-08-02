@@ -13,7 +13,7 @@ userJoinedCircles.get("/", async (req, res) => {
     const connection = mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "password",
+      // password: "password",
       database: "miniproject",
     });
     // Fetch circles that the user has joined from the database

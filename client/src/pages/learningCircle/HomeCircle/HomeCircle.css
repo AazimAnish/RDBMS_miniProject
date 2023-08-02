@@ -13,7 +13,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: 300px;
+    bottom: 300px !important;
     position: relative;
   }
   

@@ -106,7 +106,7 @@ const SignInContainer = () => {
             />
           </p>
           <p>
-            <input type="submit" id="btn" value="Login" />
+            <input className="subbut" type="submit" id="btn" value="Login" />
           </p>
         </form>
         {error && <p className="error">{error}</p>}

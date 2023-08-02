@@ -66,6 +66,7 @@ font-size: 16px;
 line-height: 24px;
 box-sizing: border-box;
 right: 0px;
+margin-left: 0px !important;
 /* identical to box height */
 
 
@@ -75,6 +76,7 @@ color: #666666;
 
  #user,#pass,#email,#phoneNumber {
   box-sizing: border-box;
+  margin-top: 0px !important;
 
 width: 528px;
 height: 56px;

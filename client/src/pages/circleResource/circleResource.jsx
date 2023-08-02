@@ -136,27 +136,27 @@ const CircleResource = () => {
       : uploadedResources;
 
     return filteredResources.map((resource) => (
-      <div key={resource.resource_id} className="crr-card">
-        <h3 className="crr-card-content">{resource.resource_name}</h3>
-        <p className="crr-card-content">{resource.description}</p>
-        <p className="crr-card-content">Category: {resource.resource_type}</p>
-        <div className="crr-card-actions">
+      <div key={resource.resource_id} className="card">
+        <h3 className="card-content">{resource.resource_name}</h3>
+        <p className="card-content">{resource.description}</p>
+        <p className="card-content">Category: {resource.resource_type}</p>
+        <div className="card-actions">
           <a
-            className="crr-card-button"
+            className="card-button-res"
             href={`http://localhost:8800/resources/${resource.file_url}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             Download
           </a>
-          {isCookiePresent() && (
-            <button
-              className="card-button"
-              onClick={() => handleDeleteResource(resource.resource_id)}
-            >
-              Delete
-            </button>
-          )}
+          {/* {isCookiePresent() && ( */}
+          <button
+            className="card-button"
+            onClick={() => handleDeleteResource(resource.resource_id)}
+          >
+            Delete
+          </button>
+          {/* )} */}
         </div>
       </div>
     ));
@@ -229,7 +229,7 @@ const CircleResource = () => {
           ) : (
             <div className="flex flex-col justify-center items-center">
               {/* <img src="../../assets/upload.png" alt="upload icon" className="w-9" /> */}
-              <label className="crr-label">Drag and drop file</label>
+              <label className="text-gray-500">Drag and drop file</label>
             </div>
           )}
         </div>
@@ -242,22 +242,19 @@ const CircleResource = () => {
           required
         />
         <input
-          className="crr-text"
           type="text"
-          placeholder="Resource Name"
-          value={resourceName}
-          onChange={handleResourceNameChange}
-          required
+          placeholder="Search by name..."
+          value={searchQuery}
+          onChange={handleSearch}
+          className="crr-search-input searchBar"
         />
         <textarea
-          className="crr-text-area"
           placeholder="Description"
           value={description}
           onChange={handleDescriptionChange}
           required
         />
         <select
-          className="crr-select"
           value={resourceType}
           onChange={handleResourceTypeChange}
           required
@@ -268,20 +265,10 @@ const CircleResource = () => {
           <option value="php">PHP</option>
           <option value="blockchain">Blockchain</option>
         </select>
-        <button className="crr-submit" type="submit">
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
-      <input
-        type="text"
-        placeholder="Search by name..."
-        value={searchQuery}
-        onChange={handleSearch}
-        className="crr-search-input searchBar"
-      />
-
       {/* <ResourceFilterBar handleResourceTypeChange={handleResourceTypeChange} /> */}
-      <div className="crr-card-flex">{renderUploadedResources()}</div>
+      <div className="card-flex">{renderUploadedResources()}</div>
     </>
   );
 };

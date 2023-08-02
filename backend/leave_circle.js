@@ -18,7 +18,7 @@ leaveCircle.post("/", async (req, res) => {
     const connection = mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "password",
+      // password: "password",
       database: "miniproject",
     });
 

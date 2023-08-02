@@ -3,6 +3,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    bottom: 200px;
+    position: relative;
   }
   
   .db-card {
@@ -37,24 +39,114 @@
     transform: translateY(-4px);
   }
 
-  .searchBar {
-  padding: 10px;
-  border: 1px solid #eaeaea;
-  border-radius: 20px;
-  margin: 10px;
-  width: 100%;
-  max-width: 300px;
-  box-sizing: border-box;
-  font-size: 16px;
+  /* Material UI Classic Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #2196F3;
+  border-radius: 4px;
+  color: #2196F3;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.button:hover {
+  background-color: #2196F3;
+  color: #ffffff;
+}
+
+.button:focus {
   outline: none;
-  background-color: #f0f0f0;
-  transition: border-color 0.2s, background-color 0.2s;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
 }
 
-.searchBar input[type="text"]:focus {
-  border-color: #3498db;
+/* Add these styles to disable the button */
+.button.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.button.disabled:hover {
+  background-color: transparent;
+  color: #2196F3;
+}
+
+/* Add these styles to make the button primary */
+.button.primary {
+  background-color: #2196F3;
+  color: #ffffff;
+}
+
+.button.primary:hover {
+  background-color: #1976D2;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
   background-color: #fff;
+  width: 10rem;
+  margin-left: 4rem;
 }
 
-  
-  
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-left: -1px;
+}
+
+.card-content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card-button {
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}

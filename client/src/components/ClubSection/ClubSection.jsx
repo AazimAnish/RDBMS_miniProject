@@ -76,7 +76,10 @@ const ClubSection = () => {
   ];
 
   return (
-    <div className="club-section">
+    <div className="club-section" id="club">
+    <nav>
+
+    </nav>
         <div className="divcontainer">
           <div className="divw-full2">
             <div className="h2mx-auto1">
