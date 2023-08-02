@@ -4,9 +4,9 @@ import cookieParser from "cookie-parser";
 import multer from "multer";
 import path from "path";
 import cors from "cors";
-import fs from 'fs'
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import fs from "fs";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -50,7 +50,6 @@ circle_resources.post("/", upload.single("file"), (req, res) => {
 
   // Check if user is authenticated (user_id is available in the cookie)
   if (!uploader_id) {
-
     return res.status(401).json({ error: "User not authenticated" });
   }
 
@@ -62,7 +61,14 @@ circle_resources.post("/", upload.single("file"), (req, res) => {
     "INSERT INTO circleresources (resource_name, file_url, description, upload_date, uploader_id, resource_type) VALUES (?, ?, ?, ?, ?, ?)";
   db.query(
     q,
-    [resource_name, file_url, description, upload_date, uploader_id, resource_type],
+    [
+      resource_name,
+      file_url,
+      description,
+      upload_date,
+      uploader_id,
+      resource_type,
+    ],
     (err, result) => {
       if (err) {
         console.log("hi there");
@@ -101,24 +107,24 @@ circle_resources.get("/", (req, res) => {
   });
 });
 
-
 // circle_resources.delete("/:resourceId/:cookieId", (req, res) => {
-  circle_resources.delete("/:resourceId", (req, res) => {
+circle_resources.delete("/:resourceId", (req, res) => {
   const resourceId = req.params.resourceId;
 
   // Check if user is authenticated (user_id is available in the cookie)
   // const uploader_id = req.cookies.user_id || NULL;
-  
+
   // if (!uploader_id) {
   //   console.log(uploader_id)
   //   return res.status(401).json({ error: "User not authenticated" });
   // }
 
   // First, retrieve the file_url of the resource from the database
-  const selectQuery = "SELECT file_url FROM circleresources WHERE resource_id = ?";
+  const selectQuery =
+    "SELECT file_url FROM circleresources WHERE resource_id = ?";
   db.query(selectQuery, [resourceId], (err, result) => {
     if (err) {
-      console.log('this is called')
+      console.log("this is called");
       return res.status(500).json({ error: "Resource deletion failed" });
     }
 
@@ -133,7 +139,7 @@ circle_resources.get("/", (req, res) => {
     const deleteQuery = "DELETE FROM circleresources WHERE resource_id = ?";
     db.query(deleteQuery, [resourceId], (err, result) => {
       if (err) {
-        console.log('this is called 2')
+        console.log("this is called 2");
         return res.status(500).json({ error: "Resource deletion failed" });
       }
 
@@ -146,16 +152,19 @@ circle_resources.get("/", (req, res) => {
             return res.status(500).json({ error: "Resource deletion failed" });
           }
 
-          return res.json({ success: true, message: "Resource deleted successfully" });
+          return res.json({
+            success: true,
+            message: "Resource deleted successfully",
+          });
         });
       } else {
-        return res.json({ success: true, message: "Resource deleted successfully" });
+        return res.json({
+          success: true,
+          message: "Resource deleted successfully",
+        });
       }
     });
   });
 });
-
-
-
 
 export default circle_resources;

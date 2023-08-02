@@ -28,10 +28,20 @@ getCircle.get("/", async (req, res) => {
       password: "password",
       database: "miniproject",
     });
+    const sqlQuery = `
+    SELECT * 
+      FROM learningcircles
+      LEFT JOIN (
+        SELECT circle_id, COUNT(participant_id) AS participant_count
+        FROM circleparticipants
+        GROUP BY circle_id
+      ) AS participants ON learningcircles.circle_id = participants.circle_id
+      WHERE participants.participant_count < learningcircles.max_participants OR participants.circle_id IS NULL;
 
+  `;
     // Fetch circles from the database using async/
     // const rows = connection.query("SELECT * FROM learningcircles");
-    connection.query("SELECT * FROM learningcircles ", (error, results) => {
+    connection.query(sqlQuery, (error, results) => {
       if (error) {
         console.error("Error occurred while fetching sponregs:", error);
         res.status(500).json({ error: "An internal server error occurred" });

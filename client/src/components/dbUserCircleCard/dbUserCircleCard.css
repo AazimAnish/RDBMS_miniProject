@@ -1,0 +1,53 @@
+/* userCircleCards.css */
+.dbb-meeting-container {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .dbb-meeting-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .dbb-meeting-item p {
+    margin: 5px 0;
+  }
+  
+  .dbb-meeting-item input[type="date"],
+  .dbb-meeting-item input[type="time"] {
+    margin-right: 10px;
+  }
+  
+  .dbb-meeting-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dbb-meeting-actions button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dbb-meeting-actions button:first-child {
+    background-color: #dc3545;
+  }
+  
+  .dbb-meeting-actions button:hover {
+    opacity: 0.8;
+  }
+  
+  .db-user-label{
+    position: relative !important;
+}
+
+.db-user-input{
+    width: auto !important;
+}

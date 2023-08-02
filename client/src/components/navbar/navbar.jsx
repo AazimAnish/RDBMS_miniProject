@@ -1,19 +1,19 @@
+/* eslint-disable no-unused-vars */
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import Cookies from "js-cookie"; // Import the js-cookie library
-import { useCookies } from 'react-cookie';
+import { useCookies } from "react-cookie";
 import "./navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const [cookies, setCookie, removeCookie] = useCookies(["user_id"]);
 
-// Check login status when the component mounts
-useEffect(() => {
-  const isLoggedInCookie = Cookies.get("isLoggedIn");
-  setIsLoggedIn(!isLoggedInCookie); // Set isLoggedIn based on the presence of the cookie
-}, []);
+  // Check login status when the component mounts
+  useEffect(() => {
+    const isLoggedInCookie = cookies.user_id;
+    setIsLoggedIn(!!isLoggedInCookie); // Set isLoggedIn based on the presence of the cookie
+  }, [cookies]);
 
   const onResourceContainerClick = useCallback(() => {
     navigate("/resources");
@@ -37,7 +37,7 @@ useEffect(() => {
 
   const onLogoutClick = useCallback(() => {
     // Clear the isLoggedIn cookie and update the state
-    removeCookie('user_id'); // Provide the path explicitly
+    removeCookie("user_id"); // Provide the path explicitly
     setIsLoggedIn(false);
   }, []);
 

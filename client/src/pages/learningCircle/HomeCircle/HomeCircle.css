@@ -10,13 +10,11 @@ p {
   
   /* First Section Styles From V2.O */
   .first_section {
-    margin: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     bottom: 300px;
     position: relative;
-    bottom: 550px;
   }
   
   .fsheading {

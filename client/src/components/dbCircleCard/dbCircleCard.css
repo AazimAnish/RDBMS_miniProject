@@ -36,4 +36,25 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
   }
+
+  .searchBar {
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 20px;
+  margin: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+  background-color: #f0f0f0;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.searchBar input[type="text"]:focus {
+  border-color: #3498db;
+  background-color: #fff;
+}
+
+  
   

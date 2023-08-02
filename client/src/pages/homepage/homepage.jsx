@@ -3,10 +3,9 @@
 import Footer from "../../components/footer/footer";
 import SecondSection from "../../components/secondSection/SecondSection";
 import ClubSection from "../../components/ClubSection/ClubSection";
-import CircleSection from "../../components/CircleSection/CircleSection"
+import CircleSection from "../../components/CircleSection/CircleSection";
 import "./homepage.css";
 import Navbar from "../../components/navbar/navbar";
-
 
 const Homepage = () => {
   // const navigate = useNavigate();
@@ -25,15 +24,14 @@ const Homepage = () => {
               <div className="divw-full">
                 <div className="h2mx-auto">
                   <b className="lets-learn-together-container">
-                    <p className="lets-learn">What is</p>
-                    <p className="lets-learn">SAIT?</p>
+                    <p className="lets-learn">WHAT IS</p>
+                    <p className="lets-learn">CAMPUX?</p>
                   </b>
                 </div>
                 <div className="p">
-                  <div className="lorem-ipsum">Students Association of IT</div>
+                  <div className="lorem-ipsum">JOIN AND LEARN IN CIRCLES</div>
                 </div>
               </div>
-              
             </div>
             <img
               className="divrelative-icon"
@@ -44,12 +42,11 @@ const Homepage = () => {
         </div>
         <SecondSection />
         <ClubSection />
-        <CircleSection/>
+        <CircleSection />
         <Footer />
       </div>
     </div>
   );
 };
-
 
 export default Homepage;

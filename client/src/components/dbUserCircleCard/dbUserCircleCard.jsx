@@ -71,6 +71,18 @@ const UserCircleCards = () => {
       console.error("Error leaving circle:", error);
     }
   };
+  const handleDeleteCircle = async (circle_id) => {
+    try {
+      // Make a DELETE request to remove the circle
+      await axios.delete(`http://localhost:8800/delete_circle/${circle_id}`, {
+        withCredentials: true,
+      });
+      // After deleting the circle, fetch updated circles
+      fetchCircles();
+    } catch (error) {
+      console.error("Error deleting circle:", error);
+    }
+  };
 
   const handleUpdateMeetingDate = async (circle_id, meeting_id) => {
     try {
@@ -147,9 +159,20 @@ const UserCircleCards = () => {
                 alt="Circle Cover"
               />
               {circle.user_role === "lead" && (
-                <>
+                <div
+                  style={{
+                    marginTop: "20px",
+                    borderTop: "1px solid #ccc",
+                    paddingTop: "20px",
+                  }}
+                >
                   {/* Add Meeting Form */}
                   <form
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
                     onSubmit={(e) => {
                       e.preventDefault();
                       handleAddMeeting(circle.circle_id);
@@ -157,8 +180,9 @@ const UserCircleCards = () => {
                     id="formid"
                   >
                     <div>
-                      <label>Date:</label>
+                      <label className="db-user-label">Date:</label>
                       <input
+                        className="db-user-input"
                         type="date"
                         name="meeting_date"
                         // value={formData.meeting_date}
@@ -166,16 +190,18 @@ const UserCircleCards = () => {
                       />
                     </div>
                     <div>
-                      <label>Time:</label>
+                      <label className="db-user-label">Time:</label>
                       <input
+                        className="db-user-input"
                         type="time"
                         name="meeting_time"
                         onChange={(e) => setMeettime(e.target.value)}
                       />
                     </div>
                     <div>
-                      <label>Location:</label>
+                      <label className="db-user-label">Location:</label>
                       <input
+                        className="db-user-input"
                         type="text"
                         name="location"
                         // value={formData.location}
@@ -183,8 +209,9 @@ const UserCircleCards = () => {
                       />
                     </div>
                     <div>
-                      <label>Agenda:</label>
+                      <label className="db-user-label">Agenda:</label>
                       <input
+                        className="db-user-input"
                         type="text"
                         name="meeting_agenda"
                         // value={formData.meeting_agenda}
@@ -193,16 +220,29 @@ const UserCircleCards = () => {
                     </div>
                     <button type="submit">Add Meeting</button>
                   </form>
-                </>
+                </div>
               )}
               <button onClick={() => handleLeaveCircle(circle.circle_id)}>
                 Leave Circle
               </button>
-              <div>
+              <div
+                style={{
+                  marginTop: "20px",
+                  borderTop: "1px solid #ccc",
+                  paddingTop: "20px",
+                }}
+              >
                 {circleMeetings &&
                   circleMeetings[circle.circle_id]?.map((meeting) => (
-                    <div key={meeting.meeting_id}>
-                      {console.log("meetingId", meeting.meeting_id)}
+                    <div
+                      key={meeting.meeting_id}
+                      style={{
+                        marginTop: "20px",
+                        borderTop: "1px solid #ccc",
+                        paddingTop: "20px",
+                      }}
+                    >
+                      {/* {console.log("meetingId", meeting.meeting_id)} */}
                       <p>Date: {meeting.meeting_date}</p>
                       <p>Time: {meeting.meeting_time}</p>
                       <p>Location: {meeting.location}</p>

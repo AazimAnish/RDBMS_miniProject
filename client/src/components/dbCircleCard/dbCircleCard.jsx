@@ -5,6 +5,7 @@ import "./dbCircleCard.css";
 const CircleCards = () => {
   const [circles, setCircles] = useState([]);
   const [userJoinedCircles, setUserJoinedCircles] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(""); // State for search query
 
   useEffect(() => {
     // Fetch the circles and the user's joined circles when the component mounts
@@ -57,10 +58,28 @@ const CircleCards = () => {
     }
   };
 
+  const handleSearchQueryChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  // Filter circles based on search query
+  const filteredCircles = circles.filter((circle) =>
+    circle.circle_name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
-    <div className="db-card-container">
-      {circles &&
-        circles.map((circle) => (
+    <div>
+      {/* Search Input */}
+      <input
+        className="searchBar"
+        type="text"
+        placeholder="Search by description..."
+        value={searchQuery}
+        onChange={handleSearchQueryChange}
+      />
+      <div className="db-card-container">
+        {/* Display Filtered Circles */}
+        {filteredCircles.map((circle) => (
           <div className="db-card" key={circle.id}>
             <div>
               <h1>{circle.circle_name}</h1>
@@ -81,6 +100,7 @@ const CircleCards = () => {
             </div>
           </div>
         ))}
+      </div>
     </div>
   );
 };

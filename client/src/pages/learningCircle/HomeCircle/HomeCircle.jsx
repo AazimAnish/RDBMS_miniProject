@@ -45,8 +45,8 @@ const CreateCircle = () => {
               <a href="/create-circle" rel="noopener noreferrer">
                 <button className="fsbtn">Create Circles</button>
               </a>
-              <a href="/create-circle" rel="noopener noreferrer">
-                <button className="fsobtn">Join Existing Circles</button>
+              <a href="/join-circle" rel="noopener noreferrer">
+                <button className="fsobtn">My Circles</button>
               </a>
             </div>
           </div>
